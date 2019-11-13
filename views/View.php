@@ -11,6 +11,6 @@ class View
     }
 
     public function output() {
-        return '<p><a href="mvc.php?action=clicked"' . $this->model->string . "</a></p>";
+        return '<p><a href="mvc.php?action=clicked">' . $this->model->string . "</a></p>";
     }
 }
