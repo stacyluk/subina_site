@@ -7,22 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebPage</title>
 </head>
-<body style="background-color: black; text-align: center" >
+<body style="background-color: white; text-align: center" >
     <?php
 
-    require 'models/Model.php';
+/*    require 'models/Model.php';
     require 'controllers/Controller.php';
-    require 'views/View.php';
+    require 'views/View.php';*/
 
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    echo "<p style='color: aliceblue; font-family: sans-serif; font-size: 48px;'>My first php page!<br></p>";
+    echo "<p style='color: cadetblue; font-family: sans-serif; font-size: 48px;'>My first php page!<br></p>";
     $date = date(DATE_RFC850);
     ?>
-
-    <?php printf("<div style='color: gold; font-size: 24px; font-family: Chandas'>Date: %s</div>", $date); ?>
 
     <?php
     $model = new Model();
