@@ -1,7 +1,7 @@
 <?php
 
 
-class HomeController extends Controller
+class Controller_Home extends Controller
 {
     function action_index()
     {

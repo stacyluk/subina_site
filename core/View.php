@@ -16,8 +16,7 @@ class View
         $home = ob_get_flush();
         echo $home;
     }*/
-    function generate($content_view, $template_view, $data = null)
-    {
+    function generate($content_view, $template_view, $data = null){
         /*
         if(is_array($data)) {
             // преобразуем элементы массива в переменные
@@ -25,6 +24,6 @@ class View
         }
         */
 
-        include '../views/'.$template_view;
+        include "views/".$template_view;
     }
 }

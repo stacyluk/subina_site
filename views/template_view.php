@@ -17,7 +17,7 @@
     </div>
 </header>
 
-<?php include __DIR__.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.$content_view; ?>
+<?php include "views/".$content_view; ?>
 
 <p style="text-align: center">2006 - 2019 КФХ «Сад Шубиной»</p>
 </body>
