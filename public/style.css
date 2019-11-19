@@ -1,5 +1,107 @@
-.header {
-    height: 453px;
-    background: linear-gradient(45deg, rgba(27, 103, 68, 0.8), rgba(61, 163, 121, 0.5)), url(../public/img/header.jpg);
-    background-size: cover;
+* {
+    margin: 0;
+    padding: 0;
 }
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.top-menu {
+    background: linear-gradient(45deg, rgba(27, 103, 68, 0.5), rgba(61, 163, 121, 0.3)), url(../public/img/header.jpg);
+}
+
+.top-menu:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.logo {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 61px;
+    padding-left: 10px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.main-menu li { display: inline-block;}
+
+.main-menu a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    line-height: 61px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: aliceblue;
+    /*
+    transition: .3s linear;
+    */
+}
+
+.main {
+    color: black;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+/*.main-menu a:before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: #F73E24;
+    position: absolute;
+    left: 50%;
+    transform: rotate(45deg) translateX(6.5px);
+    opacity: 0;
+    transition: .3s linear;
+}
+
+.menu-main a:hover:before {opacity: 1;}
+@media (max-width: 660px) {
+    .menu-main {
+        float: none;
+        padding-top: 20px;
+    }
+    .top-menu {
+        text-align: center;
+        padding: 20px 0 0 0;
+    }
+    .menu-main a {padding: 0 10px;}
+    .menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+}
+@media (max-width: 600px) {
+    .menu-main li {display: block;}
+}*/
+
+/*header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    background: linear-gradient(45deg, rgba(27, 103, 68, 0.5), rgba(61, 163, 121, 0.3)), url(../public/img/header.jpg);
+    background-size: cover;
+}*/

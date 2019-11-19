@@ -10,15 +10,28 @@
 </head>
 <body>
 <header>
-    <div class="header">
-        <a class="logo">Сад Шубиной</a>
-        <a class="info">Контакты</a>
-        <a class="info">О нас</a>
+    <div class="head-container">
+        <nav class="top-menu">
+        <a href="/" class="logo">Сад Шубиной</a>
+            <ul class="main-menu">
+                <li><a href="/contacts">Контакты</a></li>
+                <li><a href="/about">О нас</a> </li>
+            </ul>
+        </nav>
     </div>
 </header>
+<div class="main">
+    <div class="container">
 
-<?php include "views/".$content_view; ?>
 
-<p style="text-align: center">2006 - 2019 КФХ «Сад Шубиной»</p>
+        <?php include "views/".$content_view; ?>
+    </div>
+
+</div>
+<footer>
+    <div class="container">
+        <p style="text-align: center; font-size: 10px">2006 - 2019 КФХ «Сад Шубиной»</p>
+    </div>
+</footer>
 </body>
 </html>
