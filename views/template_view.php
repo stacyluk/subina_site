@@ -17,6 +17,10 @@
                 <li><a href="/contacts">Контакты</a></li>
                 <li><a href="/about">О нас</a> </li>
             </ul>
+            <ul class="bottom-menu">
+                <li><a href="/catalog">Каталог</a></li>
+                <li><a href="/">Новости и события</a></li>
+            </ul>
         </nav>
     </div>
 </header>

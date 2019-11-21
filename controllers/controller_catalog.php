@@ -12,7 +12,7 @@ class Controller_Catalog extends Controller
 
     function action_index()
     {
-        $data = $this->model->get_data();
+        $data = $this->model->fieldsTable();
         $this->view->generate('catalog_view.php', 'template_view.php', $data);
     }
 }

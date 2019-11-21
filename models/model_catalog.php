@@ -3,8 +3,13 @@
 
 class Model_Catalog extends Model
 {
-    public function get_data()
-    {
-        $this->db_connect;
+    public $type_id;
+    public $name;
+
+    public function fieldsTable(){
+        return array(
+            'type_id' => 'Type',
+            'name' => 'Name'
+        );
     }
 }

@@ -37,4 +37,4 @@
         <td>Ноябрь</td>
     </tr>
 </table>
-<img src="../public/img/map-gis.jpg">
+<img src="../public/img/map-gis.jpg" style="display: block; margin-right: auto; margin-left: auto">
