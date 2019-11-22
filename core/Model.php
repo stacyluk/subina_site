@@ -2,17 +2,14 @@
 
 class Model
 {
-    public $database = null;
-
-    public function __construct(DB $database)
+/*    public function __construct()
     {
         $this->database = $database;
     }
 
-    public function getType()
-    {
-        $type = $this->database->query('SELECT * FROM seedtype ORDER BY id DESC ');
-    }
+    public function getData() {
+
+    }*/
 
     /*  protected $db;
       protected $table;
