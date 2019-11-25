@@ -19,7 +19,7 @@
             </ul>
             <ul class="bottom-menu">
                 <li><a href="/catalog">Каталог</a></li>
-                <li><a href="/">Новости и события</a></li>
+                <li><a href="/news">Новости и события</a></li>
             </ul>
         </nav>
     </div>

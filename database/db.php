@@ -1,5 +1,7 @@
 <?php
 
+//include ('www/config/config.php');
+
 class DB {
     private static $_instance = null;
 
@@ -8,17 +10,18 @@ class DB {
     const DB_USER = 'root';
     const DB_PASS = 'PuLeLo#1999';
 
-
     private function __construct () {
 
-        $this->_instance = new PDO(
-            'mysql:host=' . self::DB_HOST . ';dbname=' . self::DB_NAME,
-            self::DB_USER,
-            self::DB_PASS,
-            [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"]
-        );
-
+       try {
+           self::$_instance = new PDO(
+               'mysql:host=' . self::DB_HOST . ';dbname=' . self::DB_NAME,
+               self::DB_USER,
+               self::DB_PASS, [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"]);
+       } catch (PDOException $exception) {
+           echo 'Подключение не удалось: '.$exception->getMessage();
+       }
     }
+
 
 	private function __clone () {}
 	private function __wakeup () {}
@@ -29,6 +32,7 @@ class DB {
             return self::$_instance;
         }
 
-        return new self;
+        new self;
+        return self::$_instance;
     }
 }
