@@ -19,7 +19,7 @@ class Model
         // обработка запроса, если нужно
         // обработка запроса, если нужно
         $sql = $this->_getSelect($select);
-        if($sql) $this->_getResult("SELECT * FROM $this->table" . $sql);
+        $this->_getResult("SELECT * FROM $this->table" . $sql);
     }
 
     // получить имя таблицы
@@ -132,7 +132,7 @@ class Model
 
             return $querySql;
         }
-        return false;
+        return ' ';
     }
 
     // выполнение запроса к базе данных

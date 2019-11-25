@@ -100,40 +100,8 @@ table {
     border: 1px;
     margin: auto;
 }
-/*.main-menu a:before {
-    content: "";
-    width: 9px;
-    height: 9px;
-    background: #F73E24;
-    position: absolute;
-    left: 50%;
-    transform: rotate(45deg) translateX(6.5px);
-    opacity: 0;
-    transition: .3s linear;
-}
 
-.menu-main a:hover:before {opacity: 1;}
-@media (max-width: 660px) {
-    .menu-main {
-        float: none;
-        padding-top: 20px;
-    }
-    .top-menu {
-        text-align: center;
-        padding: 20px 0 0 0;
-    }
-    .menu-main a {padding: 0 10px;}
-    .menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+h2{
+    color: #1b6744;
+    text-align: center
 }
-@media (max-width: 600px) {
-    .menu-main li {display: block;}
-}*/
-
-/*header {
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    margin: auto;
-    background: linear-gradient(45deg, rgba(27, 103, 68, 0.5), rgba(61, 163, 121, 0.3)), url(../public/img/header.jpg);
-    background-size: cover;
-}*/

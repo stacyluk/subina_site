@@ -1,5 +1,5 @@
+<h2>Контакты</h2>
 <table class="contacts">
-    <caption style="font-size: 16px; font-weight: bold">Контакты</caption>
     <tr>
         <td></td>
         <th>САД ШУБИНОЙ, ИП Шубина Л.Н.</th>
