@@ -102,6 +102,16 @@ table {
 }
 
 h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: #1b6744;
     text-align: center
+}
+
+a {
+    text-decoration: none;
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: black;
 }

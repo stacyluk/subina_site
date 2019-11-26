@@ -52,7 +52,11 @@ class Model
     function getRowById($id){
         try{
             $db = $this->db;
-            $stmt = $db->query("SELECT * from $this->table WHERE id = $id");
+            if(! $stmt = $db->query("SELECT * from $this->table WHERE id = $id"))
+            {
+                die(var_export($db->errorinfo(), TRUE));
+            }
+
             $row = $stmt->fetch();
         }catch(PDOException $e) {
             echo $e->getMessage();

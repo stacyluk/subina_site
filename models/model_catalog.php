@@ -20,7 +20,7 @@ class Model_Catalog extends Model
 
     public function fieldsTable() {
         return array(
-            'seeds_id' => 'Id',
+            'id' => 'Id',
             'name' => 'Name',
             'description' => 'Description',
             'weight' => 'Weight',

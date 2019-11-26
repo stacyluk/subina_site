@@ -15,4 +15,9 @@ class Controller_Catalog extends Controller
         $data = $this->model->getAllRows();
         $this->view->generate('catalog_view.php', 'template_view.php', $data);
     }
+    function action_product()
+    {
+        $data = $this->model->getRowById(1);
+        $this->view->generate('product_view.php', 'template_view.php', $data);
+    }
 }
