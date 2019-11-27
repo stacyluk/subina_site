@@ -7,7 +7,7 @@ class DB {
 
     const DB_HOST = 'localhost';
     const DB_NAME = 'shubina_db';
-    const DB_USER = 'root';
+    const DB_USER = 'user';
     const DB_PASS = 'PuLeLo#1999';
 
     private function __construct () {
