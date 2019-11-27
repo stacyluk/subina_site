@@ -19,7 +19,7 @@ class Model_Catalog extends Model
     }
 
     public function fieldsTable() {
-        return array(
+        return [
             'id' => 'Id',
             'name' => 'Name',
             'description' => 'Description',
@@ -30,7 +30,7 @@ class Model_Catalog extends Model
             'ph_link_2' => 'Photo Link 2',
             'ph_link_3' => 'Photo link 3',
             'type_id' => 'Type Id'
-        );
+        ];
     }
 
 }

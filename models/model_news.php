@@ -10,10 +10,11 @@ class Model_News extends Model
 
     public function fieldsTable() {
         return [
-            'news_id' => 'Id',
+            'id' => 'Id',
             'date' => 'Date',
             'news' => 'News',
-            'description' => 'Description'
+            'link' => 'Link',
+            'image_link' => 'Image'
         ];
     }
 }
