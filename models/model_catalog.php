@@ -12,13 +12,13 @@ class Model_Catalog extends Model
     public $type_id;
 
 
-
     public function __construct($select = false)
     {
         parent::__construct($select);
     }
 
-    public function fieldsTable() {
+    public function fieldsTable()
+    {
         return [
             'id' => 'Id',
             'name' => 'Name',

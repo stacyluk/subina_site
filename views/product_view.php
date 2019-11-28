@@ -1,5 +1,5 @@
 <?php
-if ($data){
+if ($data) {
     echo '<h2>'.$data['name'].'</h2>';
     echo '<a>'.$data['description'].'</a>';
     echo "<div>

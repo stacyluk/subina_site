@@ -25,6 +25,7 @@
     display: table;
     clear: both;
 }
+
 .logo {
     text-decoration: none;
     display: inline-block;
@@ -44,7 +45,9 @@
     float: right;
 }
 
-.main-menu li { display: inline-block;}
+.main-menu li {
+    display: inline-block;
+}
 
 .main-menu a {
     text-decoration: none;
@@ -70,7 +73,9 @@
     float: right;
 }
 
-.bottom-menu li { display: inline-block;}
+.bottom-menu li {
+    display: inline-block;
+}
 
 .bottom-menu a {
     text-decoration: none;
@@ -101,7 +106,7 @@ table {
     margin: auto;
 }
 
-h2{
+h2 {
     margin-top: 10px;
     margin-bottom: 10px;
     color: #1b6744;

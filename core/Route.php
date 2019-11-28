@@ -12,20 +12,17 @@ class Route
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
         // получаем имя контроллера
-        if ( !empty($routes[1]) )
-        {
+        if (!empty($routes[1])) {
             $controller_name = $routes[1];
         }
 
         // получаем имя экшена
-        if ( !empty($routes[2]) )
-        {
+        if (!empty($routes[2])) {
             $action_name = $routes[2];
         }
 
-        if (!empty($routes[3]))
-        {
-            $parameter=$routes[3];
+        if (!empty($routes[3])) {
+            $parameter = $routes[3];
         }
 
         // добавляем префиксы
@@ -36,20 +33,16 @@ class Route
         // подцепляем файл с классом модели (файла модели может и не быть)
         $model_file = strtolower($model_name).'.php';
         $model_path = "models/".$model_file;
-        if(file_exists($model_path))
-        {
+        if (file_exists($model_path)) {
             include "models/".$model_file;
         }
 
         // подцепляем файл с классом контроллера
         $controller_file = strtolower($controller_name).'.php';
         $controller_path = "controllers/".$controller_file;
-        if(file_exists($controller_path))
-        {
+        if (file_exists($controller_path)) {
             include "controllers/".$controller_file;
-        }
-        else
-        {
+        } else {
             /*
             правильно было бы кинуть здесь исключение,
             но для упрощения сразу сделаем редирект на страницу 404
@@ -62,18 +55,14 @@ class Route
         $action = $action_name;
 
 
-        if(method_exists($controller, $action))
-        {
-            if (!empty($routes[3]))
-            {
+        if (method_exists($controller, $action)) {
+            if (!empty($routes[3])) {
                 $controller->$action($routes[3]);
             } else {
                 // вызываем действие контроллера
                 $controller->$action();
             }
-        }
-        else
-        {
+        } else {
             // здесь также разумнее было бы кинуть исключение
             Route::ErrorPage404();
         }

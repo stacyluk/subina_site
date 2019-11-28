@@ -13,10 +13,10 @@
 <header>
     <div class="head-container">
         <nav class="top-menu">
-        <a href="/" class="logo">Сад Шубиной</a>
+            <a href="/" class="logo">Сад Шубиной</a>
             <ul class="main-menu">
                 <li><a href="/contacts">Контакты</a></li>
-                <li><a href="/about">О нас</a> </li>
+                <li><a href="/about">О нас</a></li>
             </ul>
             <ul class="bottom-menu">
                 <li><a href="/catalog">Каталог</a></li>

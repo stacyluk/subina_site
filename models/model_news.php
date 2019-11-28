@@ -8,7 +8,8 @@ class Model_News extends Model
         parent::__construct($select);
     }
 
-    public function fieldsTable() {
+    public function fieldsTable()
+    {
         return [
             'id' => 'Id',
             'date' => 'Date',
