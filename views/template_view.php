@@ -6,30 +6,46 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <base href="/">
-    <link rel="stylesheet" href="../public/style.css" type="text/css">
+    <!--  <link rel="stylesheet" href="../public/style.css" type="text/css">-->
     <title>Сад Шубиной</title>
+
+    <!--Connect to Bootstrap CSS-->
+    <link href="../public/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <!--    Connect to font Awesome-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <div class="head-container">
-        <nav class="top-menu">
-            <a href="/" class="logo">Сад Шубиной</a>
-            <ul class="main-menu">
-                <li><a href="/contacts">Контакты</a></li>
-                <li><a href="/about">О нас</a></li>
-            </ul>
-            <ul class="bottom-menu">
-                <li><a href="/catalog">Каталог</a></li>
-                <li><a href="/news">Новости и события</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg fixed-top ">
+    <a class="navbar-brand" href="/">Сад Шубиной</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
+            <li class="nav-item">
+                <a class="nav-link" data-value="catalog" href="/catalog">Каталог</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " data-value="about"href="/about">О нас</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " data-value="news" href="/news">Новости и события</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " data-value="contact" href="/contacts">Контакты</a>
+            </li>
+        </ul>
+    </div></nav>
+
 <div class="main">
     <div class="container">
 
-
+        <!-- start page content-->
         <?php include "views/".$content_view; ?>
+        <!--end page content-->
+
     </div>
 
 </div>
@@ -38,5 +54,14 @@
         <p style="text-align: center; font-size: 10px">2006 - 2019 КФХ «Сад Шубиной»</p>
     </div>
 </footer>
+
+<!--Connect to jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--Connect to Popper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<!--Connect to Bootstrap JS-->
+<script src="../public/js/bootstrap.js"></script>
+<script type="text/javascript" src='../public/js/main.js'></script
+
 </body>
 </html>
