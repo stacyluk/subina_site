@@ -1,6 +1,25 @@
 <!-- begin page content -->
-        <div class="row home">
-            <div class="col-lg-8 col-md-8 col-sm-12 desc">
+<div class="home">
+<!--    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A" src="../public/img/carousel_1.jpg" alt="Подписывайтесь на наш YouTube канал!">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" href="https://www.instagram.com/sad_shubinoy/" src="../public/img/carousel_2.jpg" alt="Подписывайтесь на нас в instagram!">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>-->
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12 desc">
             <h2>САДОВОДСТВО В СИБИРИ (Новосибирск)</h2>
             <p><b>Крестьянско-фермерское хозяйство "Сад Шубиной"</b> организован Шубиной Людмилой Николаевной кандидатом
                 сельскохозяйственных наук старшим научным сотрудником.</p>
@@ -15,11 +34,11 @@
                 месяцы реализуются саженцы с закрытой корневой системой. Сад открыт для посещения с <b>9:00</b> до <b>18:00</b>,
                 выходной
                 день - воскресенье (май, сентябрь без выходных).</p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="../public/img/subina.jpg" class="img-fluid">
-                <span class="text-justify">Шубина Л. Н.</span>
-            </div>
         </div>
-
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <img src="../public/img/subina.jpg" class="img-fluid">
+            <span class="text-justify">Шубина Л. Н.</span>
+        </div>
+    </div>
+</div>
 <!-- end page content -->

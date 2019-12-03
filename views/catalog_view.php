@@ -1,11 +1,17 @@
-<h2>Каталог
-    <h1>
-        <table style="font-size: 10px; font-weight: lighter">
-            <?php
-            foreach ($data as $row) {
+<div class="catalog">
+    <h2>Каталог</h2>
+    <div class="row">
 
-                echo '<tr><td><a href="/catalog/product/'.$row['id'].'">'.$row['name'].'</a></td><td><a>Масса: '.$row['weight'].'г</a></td><td><a>(~'.$row['quantity'].'шт)</a></td><td><a>Цена: '.$row['price'].'</a></td></tr>';
+        <?php
+        foreach ($data as $row) {
 
-            }
-            ?>
-        </table>
+            echo "<div class='col-lg-3 col-md-4 col-sm-6 part'>
+                  <a class='title' href='/catalog/product/{$row['id']}'>{$row['name']}</a>
+                  <img src='{$row['ph_link_1']}'>
+                  <div class='count'><a>Macca: {$row['weight']}г</a><a>({$row['quantity']}шт)<br></a></div>
+                  <a class='price'>Цена: {$row['price']}руб</a></div>";
+        }
+        ?>
+    </div>
+
+</div>

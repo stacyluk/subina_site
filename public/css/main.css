@@ -1,5 +1,5 @@
 .navbar{ background: #186751;}
-.nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
+.nav-link , .navbar-brand{ color: #f4f4f4; font-family: sans-serif; cursor: pointer;}
 .nav-link{ margin-right: 1em !important;}
 .nav-link:hover{ background: #f4f4f4; color: #186751; }
 .navbar-collapse{ justify-content: flex-end;}
@@ -23,10 +23,18 @@
     top: 0;
     left: 0;
 
-    background: linear-gradient(45deg, rgba(3, 146, 117, 0.7), rgba(61, 163, 121, 0.34)), url("../img/header.jpg");
+    background: linear-gradient(45deg, rgba(112, 165, 150, 0.7), rgba(61, 163, 121, 0.34)), url("../img/header.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+
+.footer {
+    background: rgba(61, 163, 121, 0.85);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
 }
 
 .home{
@@ -40,20 +48,24 @@
 }
 .home span{
     display: block;
-    color: #ececf6;
+    color: rgb(0, 44, 24);
     position: absolute;
     left: 115px;
+    font-weight: bold;
 }
 .home .desc{
     padding: 2em;
-    border-right:4px solid rgba(255, 255, 255, 0.75);
+    border-right:4px solid rgb(0, 44, 24);
+;
+;
 }
 .home .desc h2{
     color: #ff0008;
 }
 .home .desc p{
     line-height:2;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgb(0, 44, 24);
+    font-family: Arial;
 }
 
 .about {
@@ -70,7 +82,7 @@
 }
 .about .desc p{
     line-height:2;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgb(255, 255, 255);
 }
 
 .contact {
@@ -82,23 +94,116 @@
     color: #ff0008;
 }
 .contact thead {
-    color: rgba(255, 255, 255, 0.95);
+    color: rgb(0, 44, 24);
 }
 .contact tbody {
-    color: rgba(255, 255, 255, 0.95);
+    color: rgb(0, 44, 24);
 }
 .contact a {
     font-style: normal;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgb(0, 44, 24);
 }
 .contact img {
     border-radius: 5%
 }
 
-.footer {
-    background: rgba(61, 163, 121, 0.85);
-    position: fixed;
-    bottom: 0;
+.news {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}
+
+.news h2{
+    color: #ff0008;
+}
+
+.news td {
+    color: rgb(0, 44, 24);
+}
+
+.news a {
+    font-style: normal;
+    color: rgb(0, 44, 24);
+}
+
+.catalog {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}
+
+.catalog h2 {
+    color: #ff0008;
+}
+
+.catalog img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 3%
+}
+
+.catalog .part {
+    background: rgba(27, 103, 68, 0.72) none repeat scroll 0 0;
+    border: 1px solid rgba(27, 103, 68, 0.75);
+    height: 390px;
+    overflow: hidden;
+    padding: 25px 15px;
+    position: relative;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+    margin-bottom: 20px;
+}
+
+.catalog .part:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.catalog .title {
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.catalog .count {
+    left: 0;
+    position: absolute;
     width: 100%;
-    height: 60px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.catalog .part .price {
+    bottom: 15px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    color: rgba(206, 0, 0, 0.74);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}
+
+.product img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 3%
+}
+.product h2{
+    color: #ff0008;
+}
+
+.product .row {
+    font-style: normal;
+    color: rgb(0, 44, 24);
+}
+
+.product .crit a {
+    color: rgb(206, 0, 0);
+    font-size: 18px;
 }
