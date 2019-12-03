@@ -28,7 +28,7 @@
                 <a class="nav-link" data-value="catalog" href="/catalog">Каталог</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " data-value="about"href="/about">О нас</a>
+                <a class="nav-link " data-value="about" href="/about">О нас</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " data-value="news" href="/news">Новости и события</a>
@@ -38,7 +38,9 @@
             </li>
         </ul>
     </div></nav>
-
+<header class="header">
+    <div class="overlay"></div>
+</header>
 <div class="main">
     <div class="container">
 
@@ -49,14 +51,16 @@
     </div>
 
 </div>
-<footer>
-    <div class="container">
-        <p style="text-align: center; font-size: 10px">2006 - 2019 КФХ «Сад Шубиной»</p>
+<footer class=" footer py-4 text-black-50">
+    <div class="container text-center">
+        <div class="row">
+        <p>2006 - 2019 КФХ «Сад Шубиной»</p>
+        </div>
     </div>
 </footer>
 
-<!--Connect to jQuery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <!--Connect to Popper-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <!--Connect to Bootstrap JS-->
