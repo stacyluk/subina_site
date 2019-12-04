@@ -43,7 +43,7 @@
     position: relative;
 }
 
-.home img{
+.home .shubina {
     border-radius: 10%
 }
 .home span{
@@ -66,6 +66,13 @@
     line-height:2;
     color: rgb(0, 44, 24);
     font-family: Arial;
+}
+
+.home .carousel-caption {
+    font-family: "Courier New", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ececf6;
 }
 
 .about {

@@ -3,19 +3,25 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A" src="../public/img/carousel1.jpg" alt="Подписывайтесь на наш YouTube канал!">
+                <img class="d-block w-100" src="../public/img/carousel1.jpg" alt="Первый слайд">
+                <div class="carousel-caption" href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A">
+                    Подписывайтесь на наш YouTube канал!
+                </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" href="https://www.instagram.com/sad_shubinoy/" src="../public/img/carousel2.jpg" alt="Подписывайтесь на нас в instagram!">
+                <img class="d-block w-100" href="https://www.instagram.com/sad_shubinoy/" src="../public/img/carousel2.jpg" alt="Второй слайд">
+                <div class="carousel-caption">
+                    Подписывайтесь на нас в instagram!
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="sr-only">Предыдущий</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="sr-only">Следующий</span>
         </a>
     </div>
     <div class="row">
@@ -35,7 +41,7 @@
                 выходной
                 день - воскресенье (май, сентябрь без выходных).</p>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="col-lg-4 col-md-4 col-sm-12 shubina">
             <img src="../public/img/subina.jpg" class="img-fluid">
             <span class="text-justify">Шубина Л. Н.</span>
         </div>
