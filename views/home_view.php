@@ -1,12 +1,12 @@
 <!-- begin page content -->
 <div class="home">
-<!--    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A" src="../public/img/carousel_1.jpg" alt="Подписывайтесь на наш YouTube канал!">
+                <img class="d-block w-100" href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A" src="../public/img/carousel1.jpg" alt="Подписывайтесь на наш YouTube канал!">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" href="https://www.instagram.com/sad_shubinoy/" src="../public/img/carousel_2.jpg" alt="Подписывайтесь на нас в instagram!">
+                <img class="d-block w-100" href="https://www.instagram.com/sad_shubinoy/" src="../public/img/carousel2.jpg" alt="Подписывайтесь на нас в instagram!">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -17,7 +17,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>-->
+    </div>
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-12 desc">
             <h2>САДОВОДСТВО В СИБИРИ (Новосибирск)</h2>
