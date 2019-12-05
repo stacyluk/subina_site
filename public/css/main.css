@@ -1,18 +1,40 @@
-.navbar{ background: #186751;}
-.nav-link , .navbar-brand{ color: #f4f4f4; font-family: sans-serif; cursor: pointer;}
-.nav-link{ margin-right: 1em !important;}
-.nav-link:hover{ background: #f4f4f4; color: #186751; }
-.navbar-collapse{ justify-content: flex-end;}
-.navbar-toggler{  background:#fff !important;}
-.bg-dark{
-    background-color:#343a40!important
+.navbar {
+    background: #186751;
 }
-.bg-primary{
-    background-color:#007bff!important
+
+.nav-link, .navbar-brand {
+    color: #f4f4f4;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    background: #f4f4f4;
+    color: #186751;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-toggler {
+    background: #fff !important;
+}
+
+.bg-dark {
+    background-color: #343a40 !important
+}
+
+.bg-primary {
+    background-color: #007bff !important
 }
 
 
-.header{
+.header {
     min-height: 100%;
     min-width: 1024px;
 
@@ -37,7 +59,7 @@
     height: 60px;
 }
 
-.home{
+.home {
     margin: 4em 0;
     padding: 1em;
     position: relative;
@@ -46,24 +68,26 @@
 .home .shubina {
     border-radius: 10%
 }
-.home span{
+
+.home span {
     display: block;
     color: rgb(0, 44, 24);
     position: absolute;
     left: 115px;
     font-weight: bold;
 }
-.home .desc{
+
+.home .desc {
     padding: 2em;
-    border-right:4px solid rgb(0, 44, 24);
-;
-;
+    border-right: 4px solid rgb(0, 44, 24);;;
 }
-.home .desc h2{
+
+.home .desc h2 {
     color: #ff0008;
 }
-.home .desc p{
-    line-height:2;
+
+.home .desc p {
+    line-height: 2;
     color: rgb(0, 44, 24);
     font-family: Arial;
 }
@@ -81,14 +105,16 @@
     position: relative;
 }
 
-.about .desc{
+.about .desc {
     padding: 2em;
 }
-.about .desc h2{
+
+.about .desc h2 {
     color: #ff0008;
 }
-.about .desc p{
-    line-height:2;
+
+.about .desc p {
+    line-height: 2;
     color: rgb(255, 255, 255);
 }
 
@@ -97,19 +123,24 @@
     padding: 1em;
     position: relative;
 }
-.contact h2{
+
+.contact h2 {
     color: #ff0008;
 }
+
 .contact thead {
     color: rgb(0, 44, 24);
 }
+
 .contact tbody {
     color: rgb(0, 44, 24);
 }
+
 .contact a {
     font-style: normal;
     color: rgb(0, 44, 24);
 }
+
 .contact img {
     border-radius: 5%
 }
@@ -120,7 +151,7 @@
     position: relative;
 }
 
-.news h2{
+.news h2 {
     color: #ff0008;
 }
 
@@ -201,7 +232,8 @@
     max-width: 100%;
     border-radius: 3%
 }
-.product h2{
+
+.product h2 {
     color: #ff0008;
 }
 
@@ -213,4 +245,52 @@
 .product .crit a {
     color: rgb(206, 0, 0);
     font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    height: 42px;
+    padding-left: 10px;
+    border: 2px solid #78ab7d;
+    border-radius: 5px;
+    outline: none;
+    background: #F9F0DA;
+    color: #9E9C9C;
+}
+
+button {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #78ab7d;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #F9F0DA;
+}
+
+.notfound {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+    color: #002c18;
+    font-weight: bold;
 }

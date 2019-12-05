@@ -1,4 +1,3 @@
-<h1>404</h1>
-<p>
-    ERROR
-</p>
+<div class="notfound">
+    <h1>404 NOT FOUND :c</h1>
+</div>

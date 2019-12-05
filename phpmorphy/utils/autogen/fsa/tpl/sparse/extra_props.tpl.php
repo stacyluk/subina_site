@@ -1,1 +1,1 @@
-	protected $alphabet_num;
+protected $alphabet_num;

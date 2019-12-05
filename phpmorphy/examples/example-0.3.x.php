@@ -2,7 +2,7 @@
 error_reporting(E_ALL | E_STRICT);
 
 // first we include phpmorphy library
-require_once(dirname(__FILE__) . '/../src/common.php');
+require_once(dirname(__FILE__).'/../src/common.php');
 
 // set some options
 $opts = array(
@@ -12,7 +12,7 @@ $opts = array(
     // PHPMORPHY_STORAGE_MEM - load dict to memory each time when phpMorphy intialized, this useful when shmop ext. not activated. Speed same as for PHPMORPHY_STORAGE_SHM type
     'storage' => PHPMORPHY_STORAGE_FILE,
     // Enable prediction by suffix
-    'predict_by_suffix' => true, 
+    'predict_by_suffix' => true,
     // Enable prediction by prefix
     'predict_by_db' => true,
     // TODO: comment this
@@ -20,35 +20,35 @@ $opts = array(
 );
 
 // Path to directory where dictionaries located
-$dir = dirname(__FILE__) . '/../dicts';
+$dir = dirname(__FILE__).'/../dicts';
 $lang = 'ru_RU';
 
 // Create phpMorphy instance
 try {
     $morphy = new phpMorphy($dir, $lang, $opts);
-} catch(phpMorphy_Exception $e) {
-    die('Error occured while creating phpMorphy instance: ' . PHP_EOL . $e);
+} catch (phpMorphy_Exception $e) {
+    die('Error occured while creating phpMorphy instance: '.PHP_EOL.$e);
 }
 
 // All words in dictionary in UPPER CASE, so don`t forget set proper locale via setlocale(...) call
 // $morphy->getEncoding() returns dictionary encoding
 
-$words = array('ÊĞÀÊÎÇßÁËÈÊÈ', 'ÑÒÀËÈ', 'ÂÈÍÀ', 'È', 'ÄÓÕÈ', 'abc');
+$words = array('ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½', 'ï¿½ï¿½ï¿½ï¿½', 'abc');
 
-if(function_exists('iconv')) {
-    foreach($words as &$word) {
+if (function_exists('iconv')) {
+    foreach ($words as &$word) {
         $word = iconv('windows-1251', $morphy->getEncoding(), $word);
     }
     unset($word);
 }
 
 try {
-    foreach($words as $word) {
+    foreach ($words as $word) {
         // by default, phpMorphy finds $word in dictionary and when nothig found, try to predict them
         // you can change this behaviour, via second argument to getXXX or findWord methods
         $base = $morphy->getBaseForm($word);
         $all = $morphy->getAllForms($word);
-        $part_of_speech = $morphy->getPartOfSpeech($word);      
+        $part_of_speech = $morphy->getPartOfSpeech($word);
 
         // $base = $morphy->getBaseForm($word, phpMorphy::NORMAL); // normal behaviour
         // $base = $morphy->getBaseForm($word, phpMorphy::IGNORE_PREDICT); // don`t use prediction
@@ -62,7 +62,7 @@ try {
         $collection = $morphy->findWord($word);
         // or var_dump($morphy->getAllFormsWithGramInfo($word)); for debug
 
-        if(false === $collection) { 
+        if (false === $collection) {
             echo $word, " NOT FOUND\n";
             continue;
         } else {
@@ -72,12 +72,12 @@ try {
         echo 'lemmas: ', implode(', ', $base), "\n";
         echo 'all: ', implode(', ', $all), "\n";
         echo 'poses: ', implode(', ', $part_of_speech), "\n";
-        
+
         echo "\n";
         // $collection collection of paradigm for given word
 
         // TODO: $collection->getByPartOfSpeech(...);
-        foreach($collection as $paradigm) {
+        foreach ($collection as $paradigm) {
             // TODO: $paradigm->getBaseForm();
             // TODO: $paradigm->getAllForms();
             // TODO: $paradigm->hasGrammems(array('', ''));
@@ -85,18 +85,18 @@ try {
             // TODO: $paradigm->hasPartOfSpeech('');
             // TODO: $paradigm->getWordFormsByPartOfSpeech('');
 
-            
+
             echo "lemma: ", $paradigm[0]->getWord(), "\n";
-            foreach($paradigm->getFoundWordForm() as $found_word_form) {
+            foreach ($paradigm->getFoundWordForm() as $found_word_form) {
                 echo
-                    $found_word_form->getWord(), ' ',
-                    $found_word_form->getPartOfSpeech(), ' ',
-                    '(', implode(', ', $found_word_form->getGrammems()), ')',
-                    "\n";
+                $found_word_form->getWord(), ' ',
+                $found_word_form->getPartOfSpeech(), ' ',
+                '(', implode(', ', $found_word_form->getGrammems()), ')',
+                "\n";
             }
             echo "\n";
-            
-            foreach($paradigm as $word_form) {
+
+            foreach ($paradigm as $word_form) {
                 // TODO: $word_form->getWord();
                 // TODO: $word_form->getFormNo();
                 // TODO: $word_form->getGrammems();
@@ -107,6 +107,6 @@ try {
 
         echo "--\n";
     }
-} catch(phpMorphy_Exception $e) {
-    die('Error occured while text processing: ' . $e->getMessage());
+} catch (phpMorphy_Exception $e) {
+    die('Error occured while text processing: '.$e->getMessage());
 }

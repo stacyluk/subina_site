@@ -1,37 +1,42 @@
 <?php
-class phpMorphy_GrammemsProvider_ru_RU extends phpMorphy_GrammemsProvider_ForFactory {
+
+class phpMorphy_GrammemsProvider_ru_RU extends phpMorphy_GrammemsProvider_ForFactory
+{
     static protected $self_encoding = 'windows-1251';
     static protected $instances = array();
 
-    static protected $grammems_map = array( 
-        'род' => array('МР', 'ЖР', 'СР'), 
-        'одушевленность' => array('ОД', 'НО'), 
-        'число' => array('ЕД', 'МН'), 
-        'падеж' => array('ИМ', 'РД', 'ДТ', 'ВН', 'ТВ', 'ПР', 'ЗВ', '2'), 
-        'залог' => array('ДСТ', 'СТР'), 
-        'время' => array('НСТ', 'ПРШ', 'БУД'), 
-        'повелительная форма' => array('ПВЛ'), 
-        'лицо' => array('1Л', '2Л', '3Л'), 
-        'краткость' => array('КР'), 
-        'сравнительная форма' => array('СРАВН'), 
-        'превосходная степень' => array('ПРЕВ'),
-        'вид' => array('СВ', 'НС'),
-        'переходность' => array('ПЕ', 'НП'),
-        'безличный глагол' => array('БЕЗЛ'),
-    ); 
+    static protected $grammems_map = array(
+        'пїЅпїЅпїЅ' => array('пїЅпїЅ', 'пїЅпїЅ', 'пїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅ', 'пїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅ', 'пїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅ', 'пїЅпїЅ', 'пїЅпїЅ', 'пїЅпїЅ', 'пїЅпїЅ', 'пїЅпїЅ', 'пїЅпїЅ', '2'),
+        'пїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅпїЅ', 'пїЅпїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅпїЅ', 'пїЅпїЅпїЅ', 'пїЅпїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅ' => array('1пїЅ', '2пїЅ', '3пїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅпїЅпїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅпїЅпїЅ'),
+        'пїЅпїЅпїЅ' => array('пїЅпїЅ', 'пїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅ', 'пїЅпїЅ'),
+        'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ' => array('пїЅпїЅпїЅпїЅ'),
+    );
 
-    function getSelfEncoding() {
+    function getSelfEncoding()
+    {
         return 'windows-1251';
     }
 
-    function getGrammemsMap() {
+    function getGrammemsMap()
+    {
         return self::$grammems_map;
     }
 
-    static function instance(phpMorphy $morphy) {
+    static function instance(phpMorphy $morphy)
+    {
         $key = $morphy->getEncoding();
 
-        if(!isset(self::$instances[$key])) {
+        if (!isset(self::$instances[$key])) {
             $class = __CLASS__;
             self::$instances[$key] = new $class($key);
         }
