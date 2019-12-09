@@ -14,7 +14,7 @@ class Morphyus
         $options[ 'storage' ] = PHPMORPHY_STORAGE_FILE;
 
         // Инициализация библиотеки //
-        $this->phpmorphy      = new phpMorphy( $directory, $language, $options );
+        $this->phpmorphy = new phpMorphy( $directory, $language, $options );
     }
 
     /**
