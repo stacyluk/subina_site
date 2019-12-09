@@ -1,5 +1,5 @@
 <?php
-
+namespace core;
 use core\routing\Router;
 class Application
 {
@@ -17,20 +17,16 @@ class Application
      * @param  SymfonyRequest|null  $request
      * @return void
      */
-    public function run()
+    public function run($request = null)
     {
-        $this->Loader();
+        $response = $this->dispatch($request);
+        if ($response instanceof SymfonyResponse) {
+            $response->send();
+        } else {
+            echo (string) $response;
+        }
     }
 
-    public function Loader(){
-        require_once __DIR__.'../autoload.php';
-    }
-
-    /**
-     * Get the version number of the application.
-     *
-     * @return string
-     */
     public function hello()
     {
         return 'Hello';
