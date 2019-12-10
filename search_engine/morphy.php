@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'../phpmorphy/src/common.php';
+require_once '../phpmorphy/src/common.php';
 
 class Morphy
 {
@@ -8,7 +8,7 @@ class Morphy
     private $regexp_entity = '/&([a-zA-Z0-9]+);/';
 
     function __construct() {
-        $directory            = __DIR__.'../phpmorphy/dicts';
+        $directory            = '../phpmorphy/dicts';
         $language             = 'ru_RU';
         $options[ 'storage' ] = PHPMORPHY_STORAGE_FILE;
 
