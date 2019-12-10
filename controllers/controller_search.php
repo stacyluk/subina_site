@@ -8,16 +8,18 @@ class Controller_Search extends Controller
     function __construct()
     {
         $this->db = DB::getInstance();
-        $this->model = new Model_Search($this);
+        $this->model = new Model_Search();
         $this->view = new View();
     }
 
     function action_index()
     {
-        $this->view->generate('home_view.php', 'template_view.php');
+        $this->model->setProductIndex();
+        $data = $this->search();
+        $this->view->generate('home_view.php', 'template_view.php', $data);
     }
 
-    function action_search()
+    function search()
     {
         require_once '../search_engine/search_core.php';
         $search_core = new Search_Core();

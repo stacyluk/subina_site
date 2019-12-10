@@ -10,5 +10,8 @@ class Model_Search
         $this->db = DB::getInstance();
     }
 
+    function setProductIndex(){
+
+    }
 
 }
