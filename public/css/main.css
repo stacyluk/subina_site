@@ -45,7 +45,7 @@
     top: 0;
     left: 0;
 
-    background: linear-gradient(45deg, rgba(112, 165, 150, 0.7), rgba(61, 163, 121, 0.34)), url("../img/header.jpg");
+    background: linear-gradient(45deg, rgba(112, 165, 150, 0.7), rgba(61, 163, 121, 0.34));
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
