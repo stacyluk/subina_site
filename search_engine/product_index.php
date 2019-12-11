@@ -18,8 +18,7 @@ function product_index(){
         $id = $row['id'];
         $description_index = $search_core->make_index($row['description']);
         $description_index = json_encode($description_index);
-        echo $description_index;
-        $description_query = $db->prepare("UPDATE catalog SET index = :index WHERE id = :id");
+        $description_query = $db->prepare("UPDATE catalog SET `index` = :index WHERE id = :id");
         if ( !$description_query ) {
             die( "Cannot prepare requests!\n" );
         }

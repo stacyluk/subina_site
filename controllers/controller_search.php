@@ -14,7 +14,7 @@ class Controller_Search extends Controller
     function action_index()
     {
         $data = $this->model->search();
-        $this->view->generate('home_view.php', 'template_view.php', $data);
+        $this->view->generate('search_view.php', 'template_view.php', $data);
     }
 
 

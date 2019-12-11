@@ -23,20 +23,18 @@ class Model_Search
 
 
             // Получение данных //
-            $production = $connection->query("SELECT id, name, description, index FROM catalog");
+            $production = $connection->query("SELECT `id`, `name`, `description`, `index` FROM catalog");
 
             if (!$production) {
                 die("Cannot get production info.\n");
             }
 
-            // Выполнение поиска //
-            while ($product = $production->fetchAll()) {
+            // Search
+            foreach ($production->fetchAll() as $product) {
                 // Распаковка индекса //
-                $description = json_decode($product['description']);
                 $index = json_decode($product['index']);
 
-                $range = $search_core->search($query_index, $description);
-                $range += $search_core->search($query_index, $index);
+                $range = $search_core->search($query_index, $index);
 
                 if ($range > 0) {
                     $result[$product['id']] = $range;
@@ -46,9 +44,9 @@ class Model_Search
             if (isset($result)) {
                 // Сортировка по убыванию //
                 arsort($result);
-
+                return $result;
                 // Вывод результатов //
-                $i = 1;
+              /*  $i = 1;
 
                 foreach ($result as $id => $range) {
                     printf(
@@ -57,12 +55,12 @@ class Model_Search
                         $id,
                         $range
                     );
-                }
+                }*/
             } else {
-                echo("Sorry, no results found.\n");
+                return [];
             }
         } else {
-            echo( "Query cannot be empty. Try again.\n" );
+            return false;
         }
     }
 }
