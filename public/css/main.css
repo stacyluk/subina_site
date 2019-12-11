@@ -294,3 +294,9 @@ button:before {
     color: #002c18;
     font-weight: bold;
 }
+
+.search {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}

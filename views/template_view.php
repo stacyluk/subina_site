@@ -24,8 +24,8 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <form>
-        <input type="text" placeholder="Искать здесь...">
+    <form action="/search">
+        <input type="search" name="query" placeholder="Искать здесь...">
         <button type="submit"></button>
     </form>
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
