@@ -23,7 +23,7 @@ class Model_Search
 
 
             // Получение данных //
-            $production = $connection->query("SELECT `id`, `name`, `description`, `index` FROM catalog");
+            $production = $connection->query("SELECT * FROM catalog");
 
             if (!$production) {
                 die("Cannot get production info.\n");
@@ -38,6 +38,14 @@ class Model_Search
 
                 if ($range > 0) {
                     $result[$product['id']] = $range;
+/*                    $result = [array(
+                        $product['id'] => $range,
+                        $product['name'],
+                        $product['ph_link_1'],
+                        $product['weight'],
+                        $product['quantity'],
+                        $product['price'])
+                    ];*/
                 }
             }
 
@@ -46,17 +54,7 @@ class Model_Search
                 arsort($result);
 
                 return $result;
-                // Вывод результатов //
-              /*  $i = 1;
 
-                foreach ($result as $id => $range) {
-                    printf(
-                        "#%d. Found product with id %d and range %d.\n",
-                        $i++,
-                        $id,
-                        $range
-                    );
-                }*/
             } else {
                 return [];
             }
