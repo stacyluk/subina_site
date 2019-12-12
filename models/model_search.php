@@ -1,7 +1,6 @@
 <?php
-
-
-class Model_Search
+require_once __DIR__.DIRECTORY_SEPARATOR.'model_catalog.php';
+class Model_Search extends Model_Catalog
 {
     protected $db;
 
@@ -23,6 +22,7 @@ class Model_Search
 
 
             // Получение данных //
+            // TODO: вместо селекта feathAll() из базовой модели
             $production = $connection->query("SELECT * FROM catalog");
 
             if (!$production) {
@@ -35,7 +35,7 @@ class Model_Search
                 $index = json_decode($product['index']);
 
                 $range = $search_core->search($query_index, $index);
-
+                // TODO: Когда приходит запрос, создаешь модель. Можно получить все продукты с помошь метода fetchAll() из базовой модели. Пробегаем по данным берём Index Description ищем range  и в результат складываем целиком строчки из featchAll()  которые мне подошли. Создаешь ещё один массив, который формируешь и складываешь в $result складываешь сразу целую строку, которую  featchAll() вернул если range>0.
                 if ($range > 0) {
                     $result[$product['id']] = $range;
 /*                    $result = [array(
