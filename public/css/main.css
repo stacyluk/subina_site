@@ -92,7 +92,7 @@
     font-family: Arial;
 }
 
-.home .carousel-caption {
+.home .carousel-caption  a {
     font-family: "Courier New", sans-serif;
     font-weight: bold;
     font-size: 24px;
@@ -299,4 +299,13 @@ button:before {
     margin: 4em 0;
     padding: 1em;
     position: relative;
+}
+
+.search h2 {
+    color: #ff0008;
+}
+
+.search .title {
+    color: #ffffff;
+    font-weight: 600;
 }

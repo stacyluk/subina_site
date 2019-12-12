@@ -4,15 +4,15 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100" src="../public/img/carousel1.jpg" alt="Первый слайд">
-                <div class="carousel-caption" href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A">
-                    Подписывайтесь на наш YouTube канал!
+                <div class="carousel-caption" >
+                    <a href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A">Подписывайтесь на наш YouTube канал!</a>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" href="https://www.instagram.com/sad_shubinoy/"
+                <img class="d-block w-100"
                      src="../public/img/carousel2.jpg" alt="Второй слайд">
                 <div class="carousel-caption">
-                    Подписывайтесь на нас в instagram!
+                    <a href="https://www.instagram.com/sad_shubinoy/">Подписывайтесь на нас в instagram!</a>
                 </div>
             </div>
         </div>

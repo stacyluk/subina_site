@@ -44,6 +44,7 @@ class Model_Search
             if (isset($result)) {
                 // Сортировка по убыванию //
                 arsort($result);
+
                 return $result;
                 // Вывод результатов //
               /*  $i = 1;
@@ -63,4 +64,22 @@ class Model_Search
             return false;
         }
     }
+
+/*    // получить запись по id
+    function getRowById($id)
+    {
+        try {
+            $db = $this->db;
+            if (!$stmt = $db->query("SELECT * from $this->table WHERE id = $id")) {
+                die(var_export($db->errorinfo(), true));
+            }
+
+            $row = $stmt->fetch();
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            exit;
+        }
+        return $row;
+    }*/
+
 }
