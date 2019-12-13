@@ -40,19 +40,21 @@ class Model_Search extends Model_Catalog
 
                 if ($range > 0) {
                     //$result[$product['id']] = $range;
-                    $result[$range] = [
-                        $product['id'],
-                        $product['name'],
-                        $product['price'],
+                    $result[] = [
+                        'id' => $product['id'],
+                        'name' => $product['name'],
+                        'weight' => $product['weight'],
+                        'quantity' => $product['quantity'],
+                        'price' => $product['price'],
+                        'ph_link_1' => $product['ph_link_1'],
+                        'range' => $range,
                     ];
-
-
                 }
             }
 
             if (isset($result)) {
                 // Сортировка по убыванию //
-                krsort($result);
+               // arsort($result[]['range']);
 
                 return $result;
 

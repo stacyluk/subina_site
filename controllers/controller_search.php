@@ -16,6 +16,4 @@ class Controller_Search extends Controller
         $data = $this->model->search();
         $this->view->generate('search_view.php', 'template_view.php', $data);
     }
-
-
 }
