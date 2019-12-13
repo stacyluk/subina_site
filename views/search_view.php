@@ -2,14 +2,13 @@
     <h2>Результаты поиска</h2>
     <div class="row">
         <?php
-        if($data){
-            $i = 0;
-            foreach ($data as $id => $range) {
-                echo "<div class='col-sm-12'><a class='title' href='/catalog/product/$id'>Мы что-то нашли...<br></a></div>";
-            }
-        } else {
-            echo "<div class='col-sm-12'><h5 class='title'>К сожалению, по вашему запросу ничего не нашлось.<br></h5>
-                    <a>Проверь написание или используй менее специфичные термины для поиска.</a></div>";
+        foreach ($data as $row) {
+
+            echo "<div class='col-lg-3 col-md-4 col-sm-6 part'>
+                  <a class='title' href='/catalog/product/{$row['id']}'>{$row['name']}</a>
+                  <img src='{$row['ph_link_1']}'>
+                  <div class='count'><a>Macca: {$row['weight']}г</a><a>({$row['quantity']}шт)<br></a></div>
+                  <a class='price'>Цена: {$row['price']}руб</a></div>";
         }
         ?>
     </div>
