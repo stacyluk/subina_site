@@ -46,5 +46,5 @@
         </tr>
         </tbody>
     </table>
-    <img src="../public/img/map-gis.jpg" style="display: block; margin-right: auto; margin-left: auto">
+    <a href="https://2gis.ru/novosibirsk/search/%D1%81%D0%B0%D0%B4%20%D1%88%D1%83%D0%B1%D0%B8%D0%BD%D0%BE%D0%B9/firm/141265769552937/82.995856%2C54.930075?m=82.996161%2C54.929684%2F18.5"><img src="../public/img/map-gis.jpg" style="display: block; margin-right: auto; margin-left: auto"></a>
 </div>
