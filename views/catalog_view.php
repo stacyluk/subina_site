@@ -1,5 +1,5 @@
 <div class="catalog">
-    <h2>Каталог</h2>
+    <h1>Каталог</h1>
     <div class="row">
 
         <?php

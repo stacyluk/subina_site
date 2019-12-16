@@ -1,6 +1,6 @@
 <div class="contact">
 
-    <h2>Контакты</h2>
+    <h1>Контакты</h1>
     <table class="table table-striped">
         <thead>
         <tr>

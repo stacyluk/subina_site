@@ -1,5 +1,5 @@
 <div class="news">
-    <h2>Новости и события</h2>
+    <h1>Новости и события</h1>
     <table class="table table-striped">
         <?php
         foreach ($data as $row) {

@@ -1,5 +1,5 @@
 <div class="catalog">
-    <h2>Результаты поиска</h2>
+    <h1>Результаты поиска</h1>
     <div class="row">
         <?php
         foreach ($data as $row) {

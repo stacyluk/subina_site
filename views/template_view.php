@@ -13,7 +13,7 @@
     <link href="../public/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <!--    Connect to font Awesome-->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,10 +24,14 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <!--    Search field-->
+    <div class="search">
     <form action="/search">
         <input type="search" name="query" placeholder="Искать здесь...">
         <button type="submit"></button>
     </form>
+    </div>
+    <!---->
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mr-4">
             <li class="nav-item">
@@ -42,8 +46,20 @@
             <li class="nav-item">
                 <a class="nav-link " data-value="contact" href="/contacts">Контакты</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-value="faq" href="/faq">FAQ</a>
+            </li>
         </ul>
     </div>
+
+    <!--Login button-->
+    <div class="login_button">
+        <form action="/login">
+            <button type="submit"></button>
+        </form>
+    </div>
+    <!---->
+
 </nav>
 <header class="header">
     <div class="overlay"></div>
