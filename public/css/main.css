@@ -33,9 +33,14 @@
     background-color: #007bff !important
 }
 
-h1 {
-    color: #ff0008;
-    font-weight: bold;
+.container h1 {
+    color: #ff0005;
+    text-align: center;
+    font-weight: 400;
+    /*
+    border: 1px dashed #777;
+    */
+    margin-top: 13px;
 }
 
 .header {
@@ -310,6 +315,7 @@ h1 {
     margin: 4em 0;
     padding: 1em;
     position: relative;
+    text-align: center;
 }
 
 .login_button button {
@@ -334,6 +340,7 @@ h1 {
     margin: 4em 0;
     padding: 1em;
     position: relative;
+    text-align: center;
 }
 
 .faq {
