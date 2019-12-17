@@ -4,8 +4,9 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100" src="../public/img/carousel1.jpg" alt="Первый слайд">
-                <div class="carousel-caption" >
-                    <a href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A">Подписывайтесь на наш YouTube канал!</a>
+                <div class="carousel-caption">
+                    <a href="https://www.youtube.com/channel/UCPpIsB23cYN1gJPji7m795A">Подписывайтесь на наш YouTube
+                        канал!</a>
                 </div>
             </div>
             <div class="carousel-item">

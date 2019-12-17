@@ -5,6 +5,7 @@ class Search_Core
 {
     public $VERSION = "1.0.0";
     private $morphy;
+
     function __construct()
     {
         $this->morphy = new Morphy();
@@ -17,29 +18,30 @@ class Search_Core
      * @param  {integer} [range] Коэффициент значимости индексируемых данных
      * @return {object}          Результат индексирования
      */
-    public function make_index( $content, $range=1 ) {
+    public function make_index($content, $range = 1)
+    {
         $index = new stdClass;
         $index->range = $range;
         $index->words = [];
 
         // Выделение слов из текста //
-        $words = $this->morphy->get_words( $content );
+        $words = $this->morphy->get_words($content);
 
-        foreach ( $words as $word ) {
+        foreach ($words as $word) {
             // Оценка значимости слова //
-            $weight = $this->morphy->weigh( $word );
+            $weight = $this->morphy->weigh($word);
 
-            if ( $weight > 0 ) {
+            if ($weight > 0) {
                 // Количество слов в индексе //
-                $length = count( $index->words );
+                $length = count($index->words);
 
                 // Проверка существования исходного слова в индексе //
-                for ( $i = 0; $i < $length; $i++ ) {
-                    if ( $index->words[ $i ]->source === $word ) {
+                for ($i = 0; $i < $length; $i++) {
+                    if ($index->words[$i]->source === $word) {
                         // Исходное слово уже есть в индексе //
-                        $index->words[ $i ]->count++;
-                        $index->words[ $i ]->range =
-                            $range * $index->words[ $i ]->count * $index->words[ $i ]->weight;
+                        $index->words[$i]->count++;
+                        $index->words[$i]->range =
+                            $range * $index->words[$i]->count * $index->words[$i]->weight;
 
                         // Обработка следующего слова //
                         continue 2;
@@ -47,22 +49,22 @@ class Search_Core
                 }
 
                 // Если исходного слова еще нет в индексе //
-                $lemma = $this->morphy->lemmatize( $word );
+                $lemma = $this->morphy->lemmatize($word);
 
-                if ( $lemma ) {
+                if ($lemma) {
                     // Проверка наличия лемм в индексе //
-                    for ( $i = 0; $i < $length; $i++ ) {
+                    for ($i = 0; $i < $length; $i++) {
                         // Если у сравниваемого слова есть леммы //
-                        if ( $index->words[ $i ]->basic ) {
+                        if ($index->words[$i]->basic) {
                             $difference = count(
-                                array_diff( $lemma, $index->words[ $i ]->basic )
+                                array_diff($lemma, $index->words[$i]->basic)
                             );
 
                             // Если сравниваемое слово имеет менее двух отличных лемм //
-                            if ( $difference === 0 ) {
-                                $index->words[ $i ]->count++;
-                                $index->words[ $i ]->range =
-                                    $range * $index->words[ $i ]->count * $index->words[ $i ]->weight;
+                            if ($difference === 0) {
+                                $index->words[$i]->count++;
+                                $index->words[$i]->range =
+                                    $range * $index->words[$i]->count * $index->words[$i]->weight;
 
                                 // Обработка следующего слова //
                                 continue 2;
@@ -75,10 +77,10 @@ class Search_Core
                 // значит пора добавить его //
                 $node = new stdClass;
                 $node->source = $word;
-                $node->count  = 1;
-                $node->range  = $range * $weight;
+                $node->count = 1;
+                $node->range = $range * $weight;
                 $node->weight = $weight;
-                $node->basic  = $lemma;
+                $node->basic = $lemma;
 
                 $index->words[] = $node;
             }
@@ -94,25 +96,28 @@ class Search_Core
      * @param  {object}  source Данные, в которых выполняется поиск
      * @return {integer}        Суммарный ранг на основе найденных данных
      */
-    public function search( $target, $index ) {
+    public function search($target, $index)
+    {
         $total_range = 0;
 
         // Перебор слов запроса //
-        foreach ( $target->words as $target_word ) {
+        foreach ($target->words as $target_word) {
             // Перебор слов индекса //
-            foreach ( $index->words as $index_word ) {
-                if ( $index_word->source === $target_word->source ) {
+            foreach ($index->words as $index_word) {
+                if ($index_word->source === $target_word->source) {
                     $total_range += $index_word->range;
-                } else if ( $index_word->basic && $target_word->basic ) {
-                    // Если у искомого и индексированного слов есть леммы //
-                    $index_count  = count( $index_word  ->basic );
-                    $target_count = count( $target_word ->basic );
+                } else {
+                    if ($index_word->basic && $target_word->basic) {
+                        // Если у искомого и индексированного слов есть леммы //
+                        $index_count = count($index_word->basic);
+                        $target_count = count($target_word->basic);
 
-                    for ( $i = 0; $i < $target_count; $i++ ) {
-                        for ( $j = 0; $j < $index_count; $j++ ) {
-                            if ( $index_word->basic[ $j ] === $target_word->basic[ $i ] ) {
-                                $total_range += $index_word->range;
-                                continue 2;
+                        for ($i = 0; $i < $target_count; $i++) {
+                            for ($j = 0; $j < $index_count; $j++) {
+                                if ($index_word->basic[$j] === $target_word->basic[$i]) {
+                                    $total_range += $index_word->range;
+                                    continue 2;
+                                }
                             }
                         }
                     }

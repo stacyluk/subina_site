@@ -8,7 +8,7 @@ class Route
         // контроллер и действие по умолчанию
         $controller_name = 'Home';
         $action_name = 'index';
-        $url_path = parse_url( $_SERVER['REQUEST_URI'],PHP_URL_PATH);
+        $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $routes = explode('/', $url_path);
 
         // получаем имя контроллера

@@ -11,11 +11,12 @@ class controller_login extends Controller
 
     function action_index()
     {
-        //$data = $this->model->getAllRows();
+        $this->model->login();
         $this->view->generate('login_view.php', 'template_view.php');
     }
 
-    function action_register() {
+    function action_register()
+    {
         $this->model->save();
         $this->view->generate('register_view.php', 'template_view.php');
     }

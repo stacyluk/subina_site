@@ -26,10 +26,10 @@
     </button>
     <!--    Search field-->
     <div class="search">
-    <form action="/search">
-        <input type="search" name="query" placeholder="Искать здесь...">
-        <button type="submit"></button>
-    </form>
+        <form action="/search">
+            <input type="search" name="query" placeholder="Искать здесь...">
+            <button type="submit"></button>
+        </form>
     </div>
     <!---->
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
