@@ -4,7 +4,7 @@ class Model_Faq extends Model
 {
     public function __construct($select = false)
     {
-        parent::__construct($select);
+        parent::__construct('faq', $select);
     }
 
     public function fieldsTable()

@@ -6,14 +6,11 @@ class Model
     protected $table;
     private $dataResult;
 
-    public function __construct($select = false)
+    public function __construct($tableName, $select = false)
     {
         $this->db = DB::getInstance();
 
         // table name
-        $modelName = get_class($this);
-        $arrExp = explode('_', $modelName);
-        $tableName = strtolower($arrExp[1]);
         $this->table = $tableName;
 
         // обработка запроса, если нужно

@@ -11,8 +11,8 @@ class controller_login extends Controller
 
     function action_index()
     {
-        $this->model->login();
-        $this->view->generate('login_view.php', 'template_view.php');
+        $message = $this->model->login();
+        $this->view->generate('login_view.php', 'template_view.php', $message);
     }
 
     function action_register()

@@ -5,16 +5,15 @@ class Model_Search extends Model_Catalog
 {
     protected $db;
 
-    function __construct()
+    public function __construct($select = false)
     {
-        //$this->db = DB::getInstance();
+        parent::__construct($select);
     }
 
     function search()
     {
         require_once __DIR__.DIRECTORY_SEPARATOR.'../search_engine/search_core.php';
         $search_core = new Search_Core();
-        $model = new Model_Catalog();
         //$connection = $this->db;
         $query = isset($_GET['query']) ? trim($_GET['query']) : false;
 
@@ -25,7 +24,7 @@ class Model_Search extends Model_Catalog
 
             // Получение данных //
             //$production = $connection->query("SELECT * FROM catalog");
-            $production = $model->getAllRows();
+            $production = $this->getAllRows();
 
             if (!$production) {
                 die("Cannot get production info.\n");

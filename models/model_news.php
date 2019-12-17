@@ -5,7 +5,7 @@ class Model_News extends Model
 {
     public function __construct($select = false)
     {
-        parent::__construct($select);
+        parent::__construct('news', $select);
     }
 
     public function fieldsTable()

@@ -14,7 +14,7 @@ class Model_Catalog extends Model
 
     public function __construct($select = false)
     {
-        parent::__construct($select);
+        parent::__construct('catalog', $select);
     }
 
     public function fieldsTable()

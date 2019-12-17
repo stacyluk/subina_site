@@ -1,4 +1,9 @@
 <div class="login">
+    <?php
+    if($data){
+        echo $data;
+    }
+        ?>
     <h1>Вход</h1>
     <form action="/login" id="login_form" method="post" name="login_form">
         <p><label for="user_login">Имя опльзователя<br>

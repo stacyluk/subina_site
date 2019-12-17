@@ -5,7 +5,7 @@ class Model_Login extends Model
 {
     function __construct($select = false)
     {
-        parent::__construct($select);
+        parent::__construct('login', $select);
     }
 
     public function fieldsTable()
@@ -48,14 +48,16 @@ class Model_Login extends Model
                         header('Location: http://www.phpsite.local/');
                     }
                 } else {
-                    //  $message = "Invalid username or password!";
-
-                    echo "Invalid username or password!";
+                    $message = "Invalid username or password!";
                 }
             } else {
                 $message = "All fields are required!";
             }
         }
+        return $message;
+    }
+
+    public function register() {
 
     }
 }
