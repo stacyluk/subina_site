@@ -51,12 +51,17 @@
             </li>
         </ul>
     </div>
-
     <!--Login button-->
     <div class="login_button">
-        <form action="/login">
-            <button type="submit"></button>
-        </form>
+        <?php if (isset($_SESSION['logged_user'])) : ?>
+            <form action="/account">
+                <button type="submit"></button>
+            </form>
+        <?php else: ?>
+            <form action="/login">
+                <button type="submit"></button>
+            </form>
+        <?php endif; ?>
     </div>
     <!---->
 
@@ -68,7 +73,7 @@
     <div class="container">
 
         <!-- start page content-->
-        <?php include "views/".$content_view; ?>
+        <?php include "views/" . $content_view; ?>
         <!--end page content-->
 
     </div>

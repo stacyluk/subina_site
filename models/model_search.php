@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.DIRECTORY_SEPARATOR.'model_catalog.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'model_catalog.php';
 
 class Model_Search extends Model_Catalog
 {
@@ -12,7 +12,7 @@ class Model_Search extends Model_Catalog
 
     function search()
     {
-        require_once __DIR__.DIRECTORY_SEPARATOR.'../search_engine/search_core.php';
+        require_once __DIR__ . DIRECTORY_SEPARATOR . '../search_engine/search_core.php';
         $search_core = new Search_Core();
         //$connection = $this->db;
         $query = isset($_GET['query']) ? trim($_GET['query']) : false;

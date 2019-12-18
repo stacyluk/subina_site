@@ -18,6 +18,6 @@ class controller_login extends Controller
     function action_register()
     {
         $this->model->save();
-        $this->view->generate('register_view.php', 'template_view.php');
+        $this->view->generate('signup_view.php', 'template_view.php');
     }
 }

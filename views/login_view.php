@@ -1,18 +1,20 @@
 <div class="login">
     <?php
-    if($data){
+    if ($data) {
         echo $data;
     }
-        ?>
+    ?>
     <h1>Вход</h1>
-    <form action="/login" id="login_form" method="post" name="login_form">
-        <p><label for="user_login">Имя опльзователя<br>
-                <input class="input" id="username" name="username" size="20"
-                       type="text" value=""></label></p>
-        <p><label for="user_pass">Пароль<br>
-                <input class="input" id="password" name="password" size="20"
-                       type="password" value=""></label></p>
-        <p class="submit"><input class="button" name="login" type="submit" value="Log In"></p>
-        <p class="regtext">Еще не зарегистрированы? <a href="/login/register">Регистрация</a>!</p>
+    <form action="/login" method="post">
+        <p>
+        <label>Ваш логин</label><br>
+        <input type="text" name="username" value="<?php echo @$_POST['username']; ?>">
+        </p>
+        <p>
+        <label>Пароль</label><br>
+        <input type="password" name="password" value="<?php echo @$_POST['password']; ?>">
+        </p>
+        <p><input class="button" name="do_login" type="submit" value="Войти"></p>
+        <p>Еще не зарегистрированы? <a href="/signup">Регистрация</a>!</p>
     </form>
 </div>
