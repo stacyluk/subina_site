@@ -1,4 +1,4 @@
-<div class="contact">
+<div class="contact location">
 
     <h1>Контакты</h1>
     <table class="table table-striped">

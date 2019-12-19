@@ -1,4 +1,4 @@
-<div class="catalog">
+<div class="catalog location">
     <h1>Результаты поиска</h1>
     <div class="row">
         <?php

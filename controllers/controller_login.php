@@ -15,9 +15,4 @@ class controller_login extends Controller
         $this->view->generate('login_view.php', 'template_view.php', $message);
     }
 
-    function action_register()
-    {
-        $this->model->save();
-        $this->view->generate('signup_view.php', 'template_view.php');
-    }
 }

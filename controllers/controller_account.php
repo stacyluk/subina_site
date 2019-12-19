@@ -3,8 +3,23 @@
 
 class Controller_Account extends Controller
 {
+    public function __construct()
+    {
+        $this->model = new Model_Account();
+        $this->view = new View();
+    }
+
     function action_index()
     {
-        $this->view->generate('account_view.php', 'template_view.php');
+        $data = $this->model->getRowById();
+        $this->view->generate('account_view.php', 'template_view.php', $data);
+    }
+
+    function action_details(){
+        $this->view->generate('details_view.php', 'template_view.php');
+    }
+
+    function action_changepw(){
+        $this->view->generate('changepw_view.php', 'template_view.php' );
     }
 }

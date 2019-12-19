@@ -33,23 +33,22 @@ class Model_Login extends Model
             // найти пользователя в БД с таким логином и паролем
             $username = htmlspecialchars($_POST['username']);
             $password = htmlspecialchars($_POST['password']);
-            $query = $connection->query("SELECT * FROM users WHERE username ='" . $username . "' AND password='" . $password . "'");
+            $query = $connection->query("SELECT * FROM users WHERE username ='".$username."'");
             $rowcount = $query->rowCount();
             if ($rowcount != 0) {
                 $user = $query->fetchAll();
                 foreach ($user as $row) {
-                    $dbusername = $row['username'];
                     $dbpassword = $row['password'];
                 }
-                if ($username == $dbusername && $password == $dbpassword) {
-                    //логин существует
+                //логин существует
+                if (password_verify($password, $dbpassword)) {
                     //если пароль совпадает, то нужно авторизовать пользователя и сохранить сессию
-                    $_SESSION['logged_user'] = $user;
+                    $_SESSION['logged_user'] = $user[0]['id'];
                     header('Location: http://phpsite.local/');
-                    $message = 'Вы авторизованы!';
                 } else {
-                    $errors[] = 'Неверно введен логин или пароль!';
+                    $errors[] = 'Неверный пароль!';
                 }
+
 
             } else {
                 $errors[] = 'Пользователь не найден!';
@@ -58,7 +57,6 @@ class Model_Login extends Model
 
             if (empty($errors)) {
                 //all right, register user
-                // как сохранитьзапись в БД и закодировать пароль???
                 $message = 'Добро пожаловать!';
             } else {
                 $message = array_shift($errors);

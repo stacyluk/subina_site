@@ -1,5 +1,5 @@
 <!-- begin page content -->
-<div class="home">
+<div class="home location">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">

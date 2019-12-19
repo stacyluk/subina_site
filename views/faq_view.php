@@ -1,4 +1,4 @@
-<div class="faq">
+<div class="faq location">
     <h1>FAQ - часто задаваемые вопросы</h1>
     <p>Позже здесь что-нибудь появится!</p>
 </div>

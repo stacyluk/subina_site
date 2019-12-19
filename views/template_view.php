@@ -73,7 +73,7 @@
     <div class="container">
 
         <!-- start page content-->
-        <?php include "views/" . $content_view; ?>
+        <?php include "views/".$content_view; ?>
         <!--end page content-->
 
     </div>

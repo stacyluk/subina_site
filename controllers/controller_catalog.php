@@ -16,9 +16,8 @@ class Controller_Catalog extends Controller
         $this->view->generate('catalog_view.php', 'template_view.php', $data);
     }
 
-    function action_product($id)
+    function action_product()
     {
-        $data = $this->model->getRowById($id);
         $this->view->generate('product_view.php', 'template_view.php', $data);
     }
 }

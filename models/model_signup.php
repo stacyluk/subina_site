@@ -56,22 +56,33 @@ class Model_Signup extends Model
                 die("Cannot get users info.\n");
             }
 
-            foreach ($users as $user)
-            {
-                if($user['username'] === $_POST['username']) {
+            foreach ($users as $user) {
+                if ($user['username'] === $_POST['username']) {
                     $errors[] = 'Пользователь с таким логином уже есть!';
                 }
 
-                if($user['email'] === $_POST['email']) {
+                if ($user['email'] === $_POST['email']) {
                     $errors[] = 'Пользователь с таким email уже есть!';
                 }
             }
 
             if (empty($errors)) {
                 //all right, register user
-                // как сохранитьзапись в БД и закодировать пароль???
-                $this->save();
-                $message = 'Вы зарегестрированны!';
+                $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                $connection = $this->db;
+                $stmt = $connection->prepare("INSERT INTO $this->table (full_name, username, email, password) VALUES (:full_name, :username, :email, :password)");
+                $stmt->bindParam(':full_name', $_POST['full_name']);
+                $stmt->bindParam(':username', $_POST['username']);
+                $stmt->bindParam(':email', $_POST['email']);
+                $stmt->bindParam(':password', $password);
+                $stmt->execute();
+                // save session
+                $query = $connection->query("SELECT * FROM users WHERE username ='" . $_POST['username'] . "' AND password='" . $password . "'");
+                $user = $query->fetchAll();
+                $_SESSION['logged_user'] = $user[0]['id'];
+                header('Location: http://phpsite.local/');
+                // $message = 'Вы зарегестрированны! ';
+
             } else {
                 $message = array_shift($errors);
             }

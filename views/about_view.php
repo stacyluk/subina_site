@@ -1,4 +1,4 @@
-<div class="row about">
+<div class="row about location">
     <div class="col-sm-12 desc">
         <h1>О нас</h1>
         <p>Сад Шубиной заложен осенью 2004 года на площади 6га, здесь находится более 50 сортов яблонь, 8 сортов груш, 7
