@@ -78,6 +78,7 @@ class Model_Signup extends Model
                 $stmt->execute();
                 // save session
                 $query = $connection->query("SELECT * FROM users WHERE username ='" . $_POST['username'] . "' AND password='" . $password . "'");
+                // TODO: prepare
                 $user = $query->fetchAll();
                 $_SESSION['logged_user'] = $user[0]['id'];
                 header('Location: http://phpsite.local/');
