@@ -16,8 +16,10 @@ class Model_Login extends Model
             'email' => 'Email',
             'username' => 'Username',
             'password' => 'Password',
+            'activation' => 'Activation',
+            'status'=>'Status',
             'user_type' => 'User_type',
-            'global_privileges' => 'Global Privileges	',
+            'global_privileges' => 'Global Privileges',
         ];
     }
 
