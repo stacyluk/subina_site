@@ -1,24 +1,17 @@
 <?php
 
-//include ('www/config/config.php');
-
 class DB
 {
     private static $_instance = null;
-
-    const DB_HOST = 'localhost';
-    const DB_NAME = 'shubina_db';
-    const DB_USER = 'user';
-    const DB_PASS = 'PuLeLo#1999';
 
     private function __construct()
     {
 
         try {
             self::$_instance = new PDO(
-                'mysql:host='.self::DB_HOST.';dbname='.self::DB_NAME,
-                self::DB_USER,
-                self::DB_PASS,
+                'mysql:host='.DB_HOST.';dbname='.DB_NAME,
+                DB_USER,
+                DB_PASS,
                 [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'", PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         } catch (PDOException $exception) {
             echo 'Подключение не удалось: '.$exception->getMessage();

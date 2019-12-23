@@ -9,8 +9,8 @@ function Send_Mail($to,$subject,$body)
     $mail->SMTPAuth   = true;                  // активируем SMTP аутентификацию
     $mail->Host       = 'ssl://smtp.mail.ru'; // SMTP хост
     $mail->Port       =  465;                    // SMTP порт
-    $mail->Username   = "shubina.local@mail.ru";  // SMTP  имя пользователя
-    $mail->Password   = "4*n@REBkG)P+Dzf";  // SMTP пароль
+    $mail->Username   = SMTP_USER;  // SMTP  имя пользователя
+    $mail->Password   = SMTP_PASS;  // SMTP пароль
     $mail->SetFrom($from, 'From Name');
     $mail->AddReplyTo($from,'From Name');
     $mail->Subject    = $subject;
