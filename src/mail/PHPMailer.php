@@ -19,6 +19,7 @@
  */
 
 //namespace src\mail;
+require_once __DIR__.DIRECTORY_SEPARATOR.'SMTP.php';
 
 /**
  * PHPMailer - PHP email creation and transport class.

@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__.DIRECTORY_SEPARATOR.'../src/mail/send_mail.php';
 
 class Model_Signup extends Model
 {
@@ -74,7 +74,6 @@ class Model_Signup extends Model
 
             if (empty($errors)) {
                 //all right, register user
-                $base_url = 'http://www.phpsite.local/signup/';
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $activation = md5($_POST['email'].time());
                 $connection = $this->db;
@@ -86,18 +85,16 @@ class Model_Signup extends Model
                 $stmt->bindParam(':activation', $activation);
                 $stmt->execute();
                 // sending email
+                $base_url = BASE_URL;
                 $to = $_POST['email'];
-                $subject = '"Проверка Email-а"';
-                $msg = "Hi, <br/> <br/> Активация! Пожалуйста перейдите по ссылке для активации вашего аккаунта. <br/> <br/> <a href=\"'.$base_url.'activation/'.$activation.'\">'.$base_url.'activation/'.$activation.'</a>";
-                $message = "Регистрация прошла успешно! Пройдите активацию через указанный email.";
+                $subject = '"Verify Email-а"';
+                //$msg = "Hi, <br/> <br/> Активация! Пожалуйста перейдите по ссылке для активации вашего аккаунта. <br/> <br/> <a href=\"'.$base_url.'activation/'.$activation.'\">'.$base_url.'activation/'.$activation.'</a>";
+                $msg = "Здравствуйте, <br> пожалуйста, пройдите активацию вашего аккаунта на <a href='$base_url'>$base_url</a> по следующей ссылке: <br> <a href=".$base_url.'activation?code='.$activation.">$base_url.activation?code=$activation</a>";
+                $message = Send_Mail($to, $subject, $msg);
+                //$message = "Регистрация прошла успешно! Пройдите активацию через указанный email.";
                 // save session
-                $stmt = $connection->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
-                $stmt->execute(array($_POST['username'], $password));
-                $user = $stmt->fetchAll();
-                $_SESSION['logged_user'] = $user[0]['id'];
-                header('Location: http://phpsite.local/');
-                // $message = 'Вы зарегестрированны! ';
 
+               // header('Location: http://phpsite.local/');
             } else {
                 $message = array_shift($errors);
             }
