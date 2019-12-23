@@ -2,7 +2,7 @@
 
 require_once 'autoload.php';
 require_once 'database/db.php';
-//include ('config/config.php');
+require_once 'config/config.php';
 $app = new core\Application(
     dirname(__DIR__)
 );
