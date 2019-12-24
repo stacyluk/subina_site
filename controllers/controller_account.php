@@ -20,6 +20,7 @@ class Controller_Account extends Controller
     }
 
     function action_changepw(){
-        $this->view->generate('changepw_view.php', 'template_view.php' );
+        $data = $this->model->changepw();
+        $this->view->generate('changepw_view.php', 'template_view.php', $data );
     }
 }

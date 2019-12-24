@@ -9,6 +9,21 @@ class controller_login extends Controller
         $this->view = new View();
     }
 
+    public function fieldsTable()
+    {
+        return [
+            'id' => 'Id',
+            'full_name' => 'Full name',
+            'email' => 'Email',
+            'username' => 'Username',
+            'password' => 'Password',
+            'activation' => 'Activation',
+            'status'=>'Status',
+            'user_type' => 'User_type',
+            'global_privileges' => 'Global Privileges',
+        ];
+    }
+
     function action_index()
     {
         $message = $this->model->login();

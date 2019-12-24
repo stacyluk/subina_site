@@ -25,9 +25,8 @@ class Model_Signup extends Model
 
     public function signup()
     {
-        //$connection = $this->db;
+        $connection = $this->db;
 
-        $errors = [];
         if (isset($_POST['do_signup'])) {
             // проверка формы на пустоту полей
             $errors = array();
@@ -49,6 +48,10 @@ class Model_Signup extends Model
 
             if ($_POST['password'] == '') {
                 $errors[] = 'Введите пароль';
+            }
+
+            if ($_POST['password_2'] == '') {
+                $errors[] = 'Введите пароль повторно';
             }
 
             if ($_POST['password_2'] != $_POST['password']) {
@@ -76,7 +79,7 @@ class Model_Signup extends Model
                 //all right, register user
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $activation = md5($_POST['email'].time());
-                $connection = $this->db;
+                //$connection = $this->db;
                 $stmt = $connection->prepare("INSERT INTO $this->table (full_name, username, email, password, activation) VALUES (:full_name, :username, :email, :password, :activation)");
                 $stmt->bindParam(':full_name', $_POST['full_name']);
                 $stmt->bindParam(':username', $_POST['username']);
