@@ -91,13 +91,9 @@ class Model_Signup extends Model
                 $base_url = BASE_URL;
                 $to = $_POST['email'];
                 $subject = '"Verify Email-а"';
-                //$msg = "Hi, <br/> <br/> Активация! Пожалуйста перейдите по ссылке для активации вашего аккаунта. <br/> <br/> <a href=\"'.$base_url.'activation/'.$activation.'\">'.$base_url.'activation/'.$activation.'</a>";
                 $msg = "Здравствуйте, <br> пожалуйста, пройдите активацию вашего аккаунта на <a href='$base_url'>$base_url</a> по следующей ссылке: <br> <a href=".$base_url.'activation?code='.$activation.">$base_url.activation?code=$activation</a>";
                 $message = Send_Mail($to, $subject, $msg);
                 //$message = "Регистрация прошла успешно! Пройдите активацию через указанный email.";
-                // save session
-
-               // header('Location: http://phpsite.local/');
             } else {
                 $message = array_shift($errors);
             }
