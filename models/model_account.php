@@ -24,7 +24,7 @@ class Model_Account extends Model
     }
     public function getRowById($id = null)
     {
-        $id = $_SESSION['logged_user'];
+        $id = $_SESSION['logged_user']['id'];
         return parent::getRowById($id);
     }
 
@@ -52,7 +52,7 @@ class Model_Account extends Model
             }
             if(empty($errors))
             {
-                $id = $_SESSION['logged_user'];
+                $id = $_SESSION['logged_user']['id'];
                 $pass = htmlspecialchars($_POST['password']);
                 $user = $this->getRowById();
                 $dbpass = $user['password'];
@@ -64,6 +64,65 @@ class Model_Account extends Model
                     $stmt->execute(array($new_pass, $id));
                     $message = "<p>Вы успешно поменяли пароль! <a href='/'>На главную!</a></p>";
                 }
+                else {
+                    $message = 'Неверный текущий пароль!';
+                }
+
+            }else {
+                $message = array_shift($errors);
+            }
+        }
+        if (!empty($message)) {
+            return $message;
+        }
+    }
+
+    public function details()
+    {
+        $connection = $this->db;
+
+        if (isset($_POST['change_details']))
+        {
+            // verify password
+            if (trim($_POST['full_name']) == '') {
+                $errors[] = 'Введите полное имя';
+            }
+
+            if (trim($_POST['username']) == '') {
+                $errors[] = 'Введите имя пользователя';
+            }
+
+            $users = $this->getAllRows();
+
+            if (!$users) {
+                die("Cannot get users info.\n");
+            }
+
+            foreach ($users as $user) {
+                if ($user['username'] === $_POST['username'] && $_SESSION['logged_user']['username'] !== $_POST['username']) {
+                    $errors[] = 'Пользователь с таким логином уже есть!';
+                }
+            }
+
+            if(empty($errors))
+            {
+                $id = $_SESSION['logged_user']['id'];
+                $full_name = htmlspecialchars($_POST['full_name']);
+                $username = htmlspecialchars($_POST['username']);
+
+                $user = $this->getRowById();
+
+                if(($user['full_name'] !== $full_name) || ($user['username'] !== $username))
+                {
+                    $stmt = $connection->prepare("UPDATE users SET full_name = ? , username = ? WHERE id = ? ");
+                    $stmt->execute(array($full_name, $username, $id));
+                    $_SESSION['logged_user']['full_name'] = $full_name;
+                    $_SESSION['logged_user']['username'] = $username;
+
+                    $message = "<p>Вы успешно поменяли личные данные! <a href='/'>На главную!</a></p>";
+                }
+
+
 
             }else {
                 $message = array_shift($errors);

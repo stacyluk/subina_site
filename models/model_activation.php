@@ -43,7 +43,8 @@
                         $stmt = $connection->prepare("SELECT * FROM users WHERE activation = ?");
                         $stmt->execute(array($_GET['code']));
                         $user = $stmt->fetchAll();
-                        $_SESSION['logged_user'] = $user[0]['id'];
+                        // save session
+                        $_SESSION['logged_user'] = $user[0];
                         $message = "Ваш аккаунт активирован";
                     } else {
                         $message = "Ваш аккаунт уже активирован";

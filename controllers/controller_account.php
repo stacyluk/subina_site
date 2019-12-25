@@ -16,11 +16,12 @@ class Controller_Account extends Controller
     }
 
     function action_details(){
-        $this->view->generate('details_view.php', 'template_view.php');
+        $data = $this->model->details();
+        $this->view->generate('details_view.php', 'template_view.php', $data);
     }
 
     function action_changepw(){
         $data = $this->model->changepw();
-        $this->view->generate('changepw_view.php', 'template_view.php', $data );
+        $this->view->generate('changepw_view.php', 'template_view.php', $data);
     }
 }

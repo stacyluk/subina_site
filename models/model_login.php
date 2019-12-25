@@ -42,10 +42,10 @@ class Model_Login extends Model
                 foreach ($user as $row) {
                     $dbpassword = $row['password'];
                 }
-                //логин существует
+                // login exist
                 if (password_verify($password, $dbpassword)) {
-                    //если пароль совпадает, то нужно авторизовать пользователя и сохранить сессию
-                    $_SESSION['logged_user'] = $user[0]['id'];
+                    // save session
+                    $_SESSION['logged_user'] = $user[0];
                     header('Location: http://phpsite.local/');
                 } else {
                     $errors[] = 'Неверный пароль!';
