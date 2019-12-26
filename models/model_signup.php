@@ -90,10 +90,10 @@ class Model_Signup extends Model
                 // sending email
                 $base_url = BASE_URL;
                 $to = $_POST['email'];
-                $subject = '"Verify Email-а"';
+                $subject = '"Verify Email"';
                 $msg = "Здравствуйте, <br> пожалуйста, пройдите активацию вашего аккаунта на <a href='$base_url'>$base_url</a> по следующей ссылке: <br> <a href=".$base_url.'activation?code='.$activation.">$base_url.activation?code=$activation</a>";
-                $message = Send_Mail($to, $subject, $msg);
-                //$message = "Регистрация прошла успешно! Пройдите активацию через указанный email.";
+                Send_Mail($to, $subject, $msg);
+                $message = "Регистрация прошла успешно! Пройдите активацию через указанный email.";
             } else {
                 $message = array_shift($errors);
             }
