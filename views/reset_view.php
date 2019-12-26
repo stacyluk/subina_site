@@ -1,7 +1,7 @@
 <div class="reset location">
     <h1>Восстановление пароля</h1>
     <?php
-    if($data) {
+    if ($data) {
         echo $data.'<br>';
     }
     ?>

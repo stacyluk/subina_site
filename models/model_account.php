@@ -22,6 +22,7 @@ class Model_Account extends Model
             'global_privileges' => 'Global Privileges',
         ];
     }
+
     public function getRowById($id = null)
     {
         $id = $_SESSION['logged_user']['id'];
@@ -32,8 +33,7 @@ class Model_Account extends Model
     {
         $connection = $this->db;
 
-        if (isset($_POST['change_pw']))
-        {
+        if (isset($_POST['change_pw'])) {
             // проверить текущий пароль
             if ($_POST['password'] == '') {
                 $errors[] = 'Введите пароль';
@@ -50,8 +50,7 @@ class Model_Account extends Model
             if ($_POST['new_password_2'] != $_POST['new_password']) {
                 $errors[] = 'Повторный пароль введен не верно!';
             }
-            if(empty($errors))
-            {
+            if (empty($errors)) {
                 $id = $_SESSION['logged_user']['id'];
                 $pass = htmlspecialchars($_POST['password']);
                 $user = $this->getRowById();
@@ -63,12 +62,11 @@ class Model_Account extends Model
                     $stmt = $connection->prepare("UPDATE users SET password = ? WHERE id = ? ");
                     $stmt->execute(array($new_pass, $id));
                     $message = "<p>Вы успешно поменяли пароль! <a href='/account'>В личный кабинет.</a></p>";
-                }
-                else {
+                } else {
                     $message = 'Неверный текущий пароль!';
                 }
 
-            }else {
+            } else {
                 $message = array_shift($errors);
             }
         }
@@ -81,8 +79,7 @@ class Model_Account extends Model
     {
         $connection = $this->db;
 
-        if (isset($_POST['change_details']))
-        {
+        if (isset($_POST['change_details'])) {
             // verify password
             if (trim($_POST['full_name']) == '') {
                 $errors[] = 'Введите полное имя';
@@ -104,16 +101,14 @@ class Model_Account extends Model
                 }
             }
 
-            if(empty($errors))
-            {
+            if (empty($errors)) {
                 $id = $_SESSION['logged_user']['id'];
                 $full_name = htmlspecialchars($_POST['full_name']);
                 $username = htmlspecialchars($_POST['username']);
 
                 $user = $this->getRowById();
 
-                if(($user['full_name'] !== $full_name) || ($user['username'] !== $username))
-                {
+                if (($user['full_name'] !== $full_name) || ($user['username'] !== $username)) {
                     $stmt = $connection->prepare("UPDATE users SET full_name = ? , username = ? WHERE id = ? ");
                     $stmt->execute(array($full_name, $username, $id));
                     $_SESSION['logged_user']['full_name'] = $full_name;
@@ -123,8 +118,7 @@ class Model_Account extends Model
                 }
 
 
-
-            }else {
+            } else {
                 $message = array_shift($errors);
             }
         }

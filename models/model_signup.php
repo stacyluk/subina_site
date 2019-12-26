@@ -17,7 +17,7 @@ class Model_Signup extends Model
             'username' => 'Username',
             'password' => 'Password',
             'activation' => 'Activation',
-            'status'=>'Status',
+            'status' => 'Status',
             'user_type' => 'User_type',
             'global_privileges' => 'Global Privileges',
         ];
@@ -42,7 +42,7 @@ class Model_Signup extends Model
                 $errors[] = 'Введите Email';
             }
 
-            if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
+            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                 $errors[] = "Email адрес {$_POST['email']} указан неверно! ";
             }
 

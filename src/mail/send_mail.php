@@ -1,24 +1,24 @@
 <?php
-function Send_Mail($to,$subject,$body)
+function Send_Mail($to, $subject, $body)
 {
     require_once __DIR__.DIRECTORY_SEPARATOR.'PHPMailer.php';
-    $from       = "stacy.sh78@mail.ru";
-    $mail       = new PHPMailer();
+    $from = "stacy.sh78@mail.ru";
+    $mail = new PHPMailer();
     $mail->IsSMTP(true);            // use SMTP
     $mail->IsHTML(true);
-    $mail->SMTPAuth   = true;                  // активируем SMTP аутентификацию
-    $mail->Host       = 'smtp.mail.ru'; // SMTP хост
+    $mail->SMTPAuth = true;                  // активируем SMTP аутентификацию
+    $mail->Host = 'smtp.mail.ru'; // SMTP хост
     $mail->SMTPSecure = 'ssl';
-    $mail->Port       =  465;                    // SMTP порт
-    $mail->Username   = SMTP_USER;  // SMTP  имя пользователя
-    $mail->Password   = SMTP_PASS;  // SMTP пароль
+    $mail->Port = 465;                    // SMTP порт
+    $mail->Username = SMTP_USER;  // SMTP  имя пользователя
+    $mail->Password = SMTP_PASS;  // SMTP пароль
     $mail->SetFrom($from, 'Admin');
-    $mail->AddReplyTo($from,'Admin');
-    $mail->Subject    = $subject;
+    $mail->AddReplyTo($from, 'Admin');
+    $mail->Subject = $subject;
     $mail->MsgHTML($body);
     $address = $to;
     $mail->AddAddress($address, $to);
-    if($mail->Send()){
+    if ($mail->Send()) {
         $message = 'Письмо отправленно';
     } else {
         $message = 'Сообщение не было отправленно! Неверно указаны настройки вашей почты.';

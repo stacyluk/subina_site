@@ -1,7 +1,7 @@
 <div class="account location">
     <h1>Личный кабинет</h1>
     <?php
-    if ($data){
+    if ($data) {
         echo '<h2>Здравствуйте, '.$data['full_name'].'!</h2>';
     }
 

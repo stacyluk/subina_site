@@ -1,7 +1,7 @@
 <div class="activation location">
     <h1>Активация аккаунта</h1>
     <?php
-    if($data) {
+    if ($data) {
         echo $data.'<br>';
     }
     ?>

@@ -17,7 +17,7 @@ class Model_Login extends Model
             'username' => 'Username',
             'password' => 'Password',
             'activation' => 'Activation',
-            'status'=>'Status',
+            'status' => 'Status',
             'user_type' => 'User_type',
             'global_privileges' => 'Global Privileges',
         ];

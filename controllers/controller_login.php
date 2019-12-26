@@ -18,7 +18,7 @@ class controller_login extends Controller
             'username' => 'Username',
             'password' => 'Password',
             'activation' => 'Activation',
-            'status'=>'Status',
+            'status' => 'Status',
             'user_type' => 'User_type',
             'global_privileges' => 'Global Privileges',
         ];
