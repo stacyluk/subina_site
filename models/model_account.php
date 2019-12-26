@@ -62,7 +62,7 @@ class Model_Account extends Model
                     // set new password
                     $stmt = $connection->prepare("UPDATE users SET password = ? WHERE id = ? ");
                     $stmt->execute(array($new_pass, $id));
-                    $message = "<p>Вы успешно поменяли пароль! <a href='/'>На главную!</a></p>";
+                    $message = "<p>Вы успешно поменяли пароль! <a href='/account'>В личный кабинет.</a></p>";
                 }
                 else {
                     $message = 'Неверный текущий пароль!';
@@ -119,7 +119,7 @@ class Model_Account extends Model
                     $_SESSION['logged_user']['full_name'] = $full_name;
                     $_SESSION['logged_user']['username'] = $username;
 
-                    $message = "<p>Вы успешно поменяли личные данные! <a href='/'>На главную!</a></p>";
+                    $message = "<p>Вы успешно поменяли личные данные! <a href='/account'>В личный кабинет.</a></p>";
                 }
 
 

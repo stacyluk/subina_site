@@ -28,7 +28,7 @@ class Model_Login extends Model
         $connection = $this->db;
 
         if (isset($_SESSION['logged_user'])) {
-            header('Location: http://www.phpsite.local/');
+            header('Location: /');
         }
 
         if (isset($_POST['do_login'])) {
@@ -46,7 +46,7 @@ class Model_Login extends Model
                 if (password_verify($password, $dbpassword)) {
                     // save session
                     $_SESSION['logged_user'] = $user[0];
-                    header('Location: http://phpsite.local/');
+                    header('Location: /');
                 } else {
                     $errors[] = 'Неверный пароль!';
                 }

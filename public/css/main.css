@@ -202,7 +202,7 @@
     left: 0;
     position: absolute;
     width: 100%;
-    color: rgba(206, 0, 0, 0.74);
+    color: rgba(0, 44, 24, 0.74);
     font-size: 18px;
     font-weight: bold;
 }
@@ -298,5 +298,40 @@
 }
 
 .signup {
+    text-align: center;
+}
+
+.site_form form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.site_form input {
+    width: 100%;
+    height: 42px;
+    padding-left: 10px;
+    border: 2px solid #78ab7d;
+    border-radius: 5px;
+    outline: none;
+    background: #F9F0DA;
+    color: #9E9C9C;
+}
+
+.site_form .button {
+    width: 100%;
+    height: 42px;
+    padding-left: 10px;
+    border: 2px solid #78ab7d;
+    border-radius: 5px;
+    outline: none;
+    background: #78ab7d;
+    color: #ececf6;
+    font-weight: bold;
+}
+
+.site_form label {
+    font-weight: bold;
+    color: #002c18;
     text-align: center;
 }

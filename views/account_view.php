@@ -7,16 +7,20 @@
 
     if (isset($_POST['do_logout'])) {
         unset($_SESSION['logged_user']);
-        header('Location: http://phpsite.local/');
+        header('Location: /');
     }
     ?>
-    <a href="/account/details">
-        <p>Изменить данные учетной записи</p>
-    </a>
-    <a href="/account/changepw">
-        <p>Изменить пароль</p>
-    </a>
-    <form action="/account" method="post">
-        <p><input class="button" name="do_logout" type="submit" value="Выйти"></p>
-    </form>
+    <div class="row">
+        <div class="col-sm-12 site_form">
+            <a class="nav-link" href="/account/details">
+                <p>Изменить данные учетной записи</p>
+            </a>
+            <a class="nav-link" href="/account/changepw">
+                <p>Изменить пароль</p>
+            </a>
+            <form action="/account" method="post">
+                <p><input class="button" name="do_logout" type="submit" value="Выйти"></p>
+            </form>
+        </div>
+    </div>
 </div>
