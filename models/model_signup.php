@@ -1,5 +1,7 @@
 <?php
+use ZxcvbnPhp;
 require_once __DIR__.DIRECTORY_SEPARATOR.'../src/mail/send_mail.php';
+require_once __DIR__.DIRECTORY_SEPARATOR.'../src/zxcvbn/check_strength.php';
 
 class Model_Signup extends Model
 {
@@ -50,6 +52,13 @@ class Model_Signup extends Model
                 $errors[] = 'Введите пароль';
             }
 
+            // check password strength
+            $strength = ZxcvbnPhp\Check_Strength($_POST['password'], $_POST['username'], $_POST['email']);
+
+            if ($strength == null){
+                $errors[] = 'Слишком легкий пароль!';
+            }
+
             if ($_POST['password_2'] == '') {
                 $errors[] = 'Введите пароль повторно';
             }
@@ -75,6 +84,8 @@ class Model_Signup extends Model
                 }
             }
 
+            $pw_message = 'Сложность пароля: '.$strength;
+
             if (empty($errors)) {
                 //all right, register user
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -99,7 +110,7 @@ class Model_Signup extends Model
             }
         }
         if (!empty($message)) {
-            return $message;
+            return $message.'<br>'.$pw_message;
         }
     }
 }
