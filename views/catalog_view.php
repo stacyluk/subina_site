@@ -1,4 +1,5 @@
 <div class="catalog location">
+
     <h1>Каталог</h1>
     <div class="row">
 

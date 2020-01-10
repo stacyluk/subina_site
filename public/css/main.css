@@ -1,5 +1,5 @@
 .navbar {
-    background: #186751;
+    background: #7bbf6b;
 }
 
 .nav-link, .navbar-brand {
@@ -14,7 +14,7 @@
 
 .nav-link:hover {
     background: #f4f4f4;
-    color: #186751;
+    color: rgba(120, 194, 105, 0.69);
 }
 
 .navbar-collapse {
@@ -26,11 +26,11 @@
 }
 
 .bg-dark {
-    background-color: #343a40 !important
+    background-color: #9bfb99 !important
 }
 
 .bg-primary {
-    background-color: #007bff !important
+  background-color: #95ec84 !important
 }
 
 .container h1 {
@@ -60,14 +60,16 @@
     top: 0;
     left: 0;
 
+    /*
     background: linear-gradient(45deg, rgba(112, 165, 150, 0.7), rgba(61, 163, 121, 0.34));
+    */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
 
 .footer {
-    background: rgba(61, 163, 121, 0.85);
+    background: rgba(123, 191, 107, 0.62);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -119,7 +121,7 @@
 
 .about .desc p {
     line-height: 2;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .contact h2 {
@@ -241,10 +243,10 @@
     width: 100%;
     height: 42px;
     padding-left: 10px;
-    border: 2px solid #78ab7d;
+    border: 2px solid #659f55;
     border-radius: 5px;
     outline: none;
-    background: #F9F0DA;
+    background: white;
     color: #9E9C9C;
 }
 
@@ -255,7 +257,7 @@
     width: 42px;
     height: 42px;
     border: none;
-    background: #78ab7d;
+    background: #659f55;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
@@ -264,7 +266,7 @@
     content: "\f002";
     font-family: FontAwesome;
     font-size: 16px;
-    color: #F9F0DA;
+    color: white;
 }
 
 .search.notfound {
@@ -294,7 +296,7 @@
     content: "\f2bd";
     font-family: FontAwesome;
     font-size: 30px;
-    color: #F9F0DA;
+    color: white;
 }
 
 .signup {
@@ -311,22 +313,22 @@
     width: 100%;
     height: 42px;
     padding-left: 10px;
-    border: 2px solid #78ab7d;
+    border: 2px solid #659f55;
     border-radius: 5px;
     outline: none;
-    background: #F9F0DA;
-    color: #9E9C9C;
+    background: white;
+    color: #232121;
 }
 
 .site_form .button {
     width: 100%;
     height: 42px;
     padding-left: 10px;
-    border: 2px solid #78ab7d;
+    border: 2px solid #78c269;
     border-radius: 5px;
     outline: none;
-    background: #78ab7d;
-    color: #ececf6;
+    background: #78c269;
+    color: #7bbf6b;
     font-weight: bold;
 }
 
