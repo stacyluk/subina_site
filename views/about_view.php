@@ -1,4 +1,5 @@
 <div class="row about location">
+    <!-- Загрузка нашего компонента React. -->
     <div class="col-sm-12 desc">
         <h1>О нас</h1>
         <p>Сад Шубиной заложен осенью 2004 года на площади 6га, здесь находится более 50 сортов яблонь, 8 сортов груш, 7
@@ -8,4 +9,7 @@
             черемуха
             виргинская, облепиха и другие культуры.</p>
     </div>
+    <div id="like_button_container"></div>
+    <script src="../public/js/like_button.js"></script>
+
 </div>

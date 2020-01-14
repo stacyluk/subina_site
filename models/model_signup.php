@@ -1,5 +1,5 @@
 <?php
-use ZxcvbnPhp;
+//use ZxcvbnPhp;
 require_once __DIR__.DIRECTORY_SEPARATOR.'../src/mail/send_mail.php';
 require_once __DIR__.DIRECTORY_SEPARATOR.'../src/zxcvbn/check_strength.php';
 
