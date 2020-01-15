@@ -10,6 +10,4 @@
             виргинская, облепиха и другие культуры.</p>
     </div>
     <div id="like_button_container"></div>
-    <script src="../public/js/like_button.js"></script>
-
 </div>

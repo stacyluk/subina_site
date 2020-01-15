@@ -100,6 +100,7 @@
 <!-- Внимание: во время развертывания, замените "development.js" на "production.min.js". -->
 <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+<script type="module text/javascript" src="/var/www/phpsite.local/public/js/like_button.js"></script>
 
 </body>
 </html>
