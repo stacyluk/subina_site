@@ -1,14 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
+// import React from "react.production.min.js";
+// import ReactDOM from "react-dom.production.min.js";
 
 'use strict';
 
-const e = React.createElement;
 
 class LikeButton extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { liked: false };
+        this.state = {liked: false};
     }
 
     render() {
@@ -16,13 +15,13 @@ class LikeButton extends React.Component {
             return 'You liked this.';
         }
 
-        return e(
-            'button',
-            { onClick: () => this.setState({ liked: true }) },
-            'Like'
+        return (
+            <button className="btn btn-primary" onClick={() => this.setState({liked: true})}>
+                Нравится
+            </button>
         );
     }
 }
 
 const domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(e(LikeButton), domContainer);
+ReactDOM.render(<LikeButton/>, domContainer);

@@ -12,10 +12,10 @@
     ?>
     <div class="row">
         <div class="col-sm-12 site_form">
-            <a class="nav-link" href="/account/details">
+            <a class="nav-link reg-link" href="/account/details">
                 <p>Изменить данные учетной записи</p>
             </a>
-            <a class="nav-link" href="/account/changepw">
+            <a class="nav-link reg-link" href="/account/changepw">
                 <p>Изменить пароль</p>
             </a>
             <form action="/account" method="post">

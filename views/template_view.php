@@ -14,6 +14,10 @@
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <!--    Connect to font Awesome-->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="http://www.phpsite.local/public/js/like_button.js"></script>
 </head>
 
 <body>
@@ -98,9 +102,7 @@
 
 <!-- Загрузка React. -->
 <!-- Внимание: во время развертывания, замените "development.js" на "production.min.js". -->
-<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-<script type="module text/javascript" src="/var/www/phpsite.local/public/js/like_button.js"></script>
+
 
 </body>
 </html>

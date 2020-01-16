@@ -328,7 +328,7 @@
     border-radius: 5px;
     outline: none;
     background: #78c269;
-    color: #7bbf6b;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -336,4 +336,8 @@
     font-weight: bold;
     color: #002c18;
     text-align: center;
+}
+.reg-link {
+    color: #1e7e34;
+    font-weight: bold;
 }

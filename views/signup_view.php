@@ -30,7 +30,8 @@
                     <input type="password" name="password_2" value="<?php echo @$_POST['password_2']; ?>">
                 </p>
                 <p><input class="button" name="do_signup" type="submit" value="Зарегистрироваться"></p>
-                <p>Уже зарегистрированы? <br><a class="nav-link" href="/login">Введите имя пользователя!</a></p>
+                <p>Уже зарегистрированы? <br><a class="nav-link reg-link" href="/login">Введите имя пользователя!</a>
+                </p>
             </form>
         </div>
     </div>

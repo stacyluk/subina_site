@@ -18,7 +18,7 @@
                 </p>
                 <p><input class="button" name="do_login" type="submit" value="Войти"></p>
                 <p><a href="/reset">Забыли пароль?</a><br></p>
-                <p>Еще не зарегистрированы? <a class="nav-link" href="/signup">Регистрация!</a></p>
+                <p>Еще не зарегистрированы? <a class="nav-link  reg-link" href="/signup">Регистрация!</a></p>
             </form>
         </div>
     </div>

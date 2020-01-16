@@ -55,7 +55,7 @@ class Model_Signup extends Model
             // check password strength
             $strength = ZxcvbnPhp\Check_Strength($_POST['password'], $_POST['username'], $_POST['email']);
 
-            if ($strength == null){
+            if ($strength == null) {
                 $errors[] = 'Слишком легкий пароль!';
             }
 
