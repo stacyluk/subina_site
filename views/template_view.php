@@ -18,6 +18,7 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel" src="http://phpsite.local/public/js/like_button.js"></script>
+    <script type="text/babel" src="http://phpsite.local/public/js/products.js"></script>
 </head>
 
 <body>

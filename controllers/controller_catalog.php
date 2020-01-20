@@ -21,4 +21,14 @@ class Controller_Catalog extends Controller
         $data = $this->model->getRowById($id);
         $this->view->generate('product_view.php', 'template_view.php', $data);
     }
+
+    function action_productsList()
+    {
+        // api method to get json list of products
+
+        $data = $this->model->getAllRows();
+        // обработать массив данных, сделать новый массив без числовых индексов
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
 }
