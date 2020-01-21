@@ -1,6 +1,6 @@
 <div class="catalog location">
     <h1>Результаты поиска</h1>
-    <!--<div class="row">
+<!--    <div class="row">
         <?php
 /*        foreach ($data as $row) {
 
@@ -12,6 +12,7 @@
         }
         */?>
     </div>-->
+
     <div id="search_result_container"></div>
 
 </div>

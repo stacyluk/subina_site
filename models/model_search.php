@@ -10,12 +10,12 @@ class Model_Search extends Model_Catalog
         parent::__construct($select);
     }
 
-    function search()
+    function search($query)
     {
         require_once __DIR__.DIRECTORY_SEPARATOR.'../search_engine/search_core.php';
         $search_core = new Search_Core();
         //$connection = $this->db;
-        $query = isset($_GET['query']) ? trim($_GET['query']) : false;
+        //$query = isset($_GET['query']) ? trim($_GET['query']) : false;
 
         if ($query) {
             // Обработка поискового запроса //

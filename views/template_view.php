@@ -26,6 +26,11 @@
     <script type="text/babel" src="http://phpsite.local/public/js/like_button.js"></script>
     <script type="text/babel" src="http://phpsite.local/public/js/products.js"></script>
     <script type="text/babel" src="http://phpsite.local/public/js/search_result.js"></script>
+    <script>
+        window.reactInit = {
+            query: <?php echo $_GET['query']; ?>
+        };
+    </script>
 </head>
 
 <body>

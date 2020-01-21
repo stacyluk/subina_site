@@ -4,6 +4,7 @@
 class ProductsResult extends React.Component {
     constructor(props) {
         super(props);
+        this.query = reactInit.query;
         this.state = {
             error: null,
             isLoaded: false,
@@ -12,7 +13,8 @@ class ProductsResult extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://phpsite.local/search/searchList")
+
+        fetch('http://phpsite.local/search/searchList')
             .then(res => res.json())
             .then(
                 (result) => {
