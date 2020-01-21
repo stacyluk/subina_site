@@ -1,6 +1,3 @@
-// import React from "react.production.min.js";
-// import ReactDOM from "react-dom.production.min.js";
-
 'use strict';
 
 

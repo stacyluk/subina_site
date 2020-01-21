@@ -53,7 +53,7 @@ class Model_Search extends Model_Catalog
             }
 
             if (isset($result)) {
-                // Сортировка по убыванию //
+                // Сортировка по убыванию
                 // arsort($result[]['range']);
 
                 return $result;

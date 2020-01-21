@@ -1,7 +1,7 @@
 'use strict';
 
 
-class Products extends React.Component {
+class ProductsResult extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,7 @@ class Products extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://phpsite.local/catalog/productsList")
+        fetch("http://phpsite.local/search/searchList")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -59,5 +59,5 @@ class Products extends React.Component {
     }
 }
 
-const domContainer = document.querySelector('#product_catalog_container');
-ReactDOM.render(<Products/>, domContainer);
+const domContainer = document.querySelector('#search_result_container');
+ReactDOM.render(<ProductsResult/>, domContainer);

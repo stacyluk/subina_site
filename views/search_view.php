@@ -1,8 +1,8 @@
 <div class="catalog location">
     <h1>Результаты поиска</h1>
-    <div class="row">
+    <!--<div class="row">
         <?php
-        foreach ($data as $row) {
+/*        foreach ($data as $row) {
 
             echo "<div class='col-lg-3 col-md-4 col-sm-6 part'>
                   <a class='title' href='/catalog/product/{$row['id']}'>{$row['name']}
@@ -10,6 +10,8 @@
                   <div class='count'><a>Macca: {$row['weight']}г</a><a>({$row['quantity']}шт)<br></a></div>
                   <a class='price'>Цена: {$row['price']}руб</a></a></div>";
         }
-        ?>
-    </div>
+        */?>
+    </div>-->
+    <div id="search_result_container"></div>
+
 </div>

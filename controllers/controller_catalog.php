@@ -27,7 +27,7 @@ class Controller_Catalog extends Controller
         // api method to get json list of products
 
         $data = $this->model->getAllRows();
-        // обработать массив данных, сделать новый массив без числовых индексов
+        // TODO: обработать массив данных, сделать новый массив без числовых индексов
         header('Content-Type: application/json');
         echo json_encode($data);
     }

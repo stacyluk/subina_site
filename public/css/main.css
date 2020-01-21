@@ -169,8 +169,8 @@
 }
 
 .catalog .part {
-    background: rgba(27, 103, 68, 0.72) none repeat scroll 0 0;
-    border: 1px solid rgba(27, 103, 68, 0.75);
+    background: rgba(123, 191, 107, 0.72) none repeat scroll 0 0;
+    border: 1px solid rgba(133, 191, 123, 0.75);
     height: 390px;
     overflow: hidden;
     padding: 25px 15px;
