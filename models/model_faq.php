@@ -1,5 +1,6 @@
 <?php
-
+    namespace model;
+    use core\Model;
 class Model_Faq extends Model
 {
     public function __construct($select = false)

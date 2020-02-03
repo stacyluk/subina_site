@@ -1,7 +1,8 @@
 <?php
-//use ZxcvbnPhp;
-require_once __DIR__.DIRECTORY_SEPARATOR.'../src/mail/send_mail.php';
-require_once __DIR__.DIRECTORY_SEPARATOR.'../src/zxcvbn/check_strength.php';
+    namespace model;
+    use core\Model;
+require_once __DIR__.DIRECTORY_SEPARATOR;
+require_once __DIR__.DIRECTORY_SEPARATOR;
 
 class Model_Signup extends Model
 {

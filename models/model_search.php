@@ -1,4 +1,5 @@
 <?php
+    namespace model;
 require_once __DIR__.DIRECTORY_SEPARATOR.'model_catalog.php';
 
 class Model_Search extends Model_Catalog

@@ -1,5 +1,7 @@
 <?php
-
+    use core\Controller;
+    use core\View;
+    use model\Model_Catalog;
 
 class Controller_Catalog extends Controller
 {

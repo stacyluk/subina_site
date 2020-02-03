@@ -1,4 +1,5 @@
 <?php
+    use core\Controller;
 
 class controller_404 extends Controller
 {

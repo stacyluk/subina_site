@@ -1,4 +1,5 @@
 <?php
+    use core\Controller;
 
 class Controller_About extends Controller
 {

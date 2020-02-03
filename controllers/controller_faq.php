@@ -1,7 +1,9 @@
 <?php
+    use core\Controller;
+    use core\View;
+    use model\Model_Faq;
 
-
-class Controller_Faq extends Controller
+    class Controller_Faq extends Controller
 {
     function __construct()
     {

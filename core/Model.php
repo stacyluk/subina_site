@@ -1,4 +1,6 @@
 <?php
+    namespace core;
+    use database\DB;
 
 class Model
 {

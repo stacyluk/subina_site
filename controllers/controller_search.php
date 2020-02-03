@@ -1,5 +1,7 @@
 <?php
-
+    use core\Controller;
+    use core\View;
+    use model\Model_Search;
 
 class Controller_Search extends Controller
 {

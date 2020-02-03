@@ -1,6 +1,8 @@
 <?php
+    namespace model;
+    use core\Model;
 require_once __DIR__.DIRECTORY_SEPARATOR.'../src/generate_pw.php';
-require_once __DIR__.DIRECTORY_SEPARATOR.'../src/mail/send_mail.php';
+require_once __DIR__.DIRECTORY_SEPARATOR;
 
 class Model_Reset extends Model
 {

@@ -1,5 +1,7 @@
 <?php
-
+    use core\Controller;
+    use core\View;
+    use model\Model_News;
 
 class Controller_News extends Controller
 {
