@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__.DIRECTORY_SEPARATOR.'../phpmorphy/src/common.php';
+namespace src\search_engine;
+//require_once PHPMORPHY_DIR.'common.php';
+require_once __DIR__.DIRECTORY_SEPARATOR.'../../libs/phpmorphy/src/common.php';
 
 class Morphy
 {
@@ -9,7 +11,7 @@ class Morphy
 
     function __construct()
     {
-        $directory = __DIR__.DIRECTORY_SEPARATOR.'../phpmorphy/dicts';
+        $directory = __DIR__.DIRECTORY_SEPARATOR;
         $language = 'ru_RU';
         $options['storage'] = PHPMORPHY_STORAGE_FILE;
 

@@ -1,6 +1,7 @@
 <?php
-require_once 'search_core.php';
-require_once '../database/db.php';
+namespace src\search_engine;
+
+use database\DB;
 
 function product_index()
 {

@@ -1,4 +1,5 @@
 <?php
+namespace pw;
 function Generate_Pw()
 {
     $num = 10;

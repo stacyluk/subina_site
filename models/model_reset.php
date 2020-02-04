@@ -1,8 +1,7 @@
 <?php
-    namespace model;
-    use core\Model;
-require_once __DIR__.DIRECTORY_SEPARATOR.'../src/generate_pw.php';
-require_once __DIR__.DIRECTORY_SEPARATOR;
+namespace model;
+use core\Model;
+use function pw\Generate_Pw;
 
 class Model_Reset extends Model
 {

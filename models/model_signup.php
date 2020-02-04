@@ -1,8 +1,8 @@
 <?php
     namespace model;
     use core\Model;
-require_once __DIR__.DIRECTORY_SEPARATOR;
-require_once __DIR__.DIRECTORY_SEPARATOR;
+    use function src\Send_Mail;
+    use function src\Check_Strength;
 
 class Model_Signup extends Model
 {
@@ -54,7 +54,7 @@ class Model_Signup extends Model
             }
 
             // check password strength
-            $strength = ZxcvbnPhp\Check_Strength($_POST['password'], $_POST['username'], $_POST['email']);
+            $strength = Check_Strength($_POST['password'], $_POST['username'], $_POST['email']);
 
             if ($strength == null) {
                 $errors[] = 'Слишком легкий пароль!';

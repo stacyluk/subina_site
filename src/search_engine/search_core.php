@@ -1,5 +1,5 @@
 <?php
-require_once 'morphy.php';
+namespace src\search_engine;
 
 class Search_Core
 {

@@ -1,6 +1,6 @@
 <?php
-    namespace model;
-require_once __DIR__.DIRECTORY_SEPARATOR.'model_catalog.php';
+namespace model;
+use src\search_engine\Search_Core;
 
 class Model_Search extends Model_Catalog
 {
@@ -13,7 +13,6 @@ class Model_Search extends Model_Catalog
 
     function search($query)
     {
-        require_once __DIR__.DIRECTORY_SEPARATOR.'../search_engine/search_core.php';
         $search_core = new Search_Core();
         //$connection = $this->db;
         //$query = isset($_GET['query']) ? trim($_GET['query']) : false;

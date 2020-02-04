@@ -1,4 +1,5 @@
 <?php
+namespace src;
     use PHPMailer\PHPMailer\PHPMailer;
 
     function Send_Mail($to, $subject, $body)
