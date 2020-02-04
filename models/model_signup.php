@@ -1,8 +1,10 @@
 <?php
-    namespace model;
-    use core\Model;
-    use function src\Send_Mail;
-    use function src\Check_Strength;
+
+namespace models;
+
+use core\Model;
+use function scripts\Check_Strength;
+use function scripts\Send_Mail;
 
 class Model_Signup extends Model
 {

@@ -9,7 +9,7 @@ class Matcher
     /**
      * Get matches for a password.
      *
-     * @see zxcvbn/src/matching.coffee::omnimatch
+     * @see zxcvbn/scripts/matching.coffee::omnimatch
      *
      * @param string $password   Password string to match
      * @param array  $userInputs Array of values related to the user (optional)

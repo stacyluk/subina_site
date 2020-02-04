@@ -1,5 +1,8 @@
 <?php
-    use core\Controller;
+
+//namespace controllers;
+
+use core\Controller;
 
 class Controller_About extends Controller
 {

@@ -6,7 +6,7 @@ if (2 == (ini_get('mbstring.func_overload') & 2)) {
 
 require_once(dirname(__FILE__).'/../utils/autogen/gramtab/gen.php');
 
-$gramtab_consts_file = dirname(__FILE__).'/../src/gramtab_consts.php';
+$gramtab_consts_file = dirname(__FILE__).'/../scripts/gramtab_consts.php';
 
 try {
     generate_gramtab_consts_file($gramtab_consts_file);

@@ -1,9 +1,12 @@
 <?php
-    use core\Controller;
-    use core\View;
-    use model\Model_Faq;
 
-    class Controller_Faq extends Controller
+//namespace controllers;
+
+use core\Controller;
+use core\View;
+use models\Model_Faq;
+
+class Controller_Faq extends Controller
 {
     function __construct()
     {

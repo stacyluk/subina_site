@@ -1,6 +1,8 @@
 <?php
-    namespace model;
-    use core\Model;
+
+namespace models;
+
+use core\Model;
 
 class Model_News extends Model
 {

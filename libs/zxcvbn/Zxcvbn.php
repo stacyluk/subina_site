@@ -5,7 +5,7 @@ namespace ZxcvbnPhp;
 /**
  * The main entry point.
  *
- * @see  zxcvbn/src/main.coffee
+ * @see  zxcvbn/scripts/main.coffee
  */
 class Zxcvbn
 {

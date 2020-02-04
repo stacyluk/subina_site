@@ -1,7 +1,9 @@
 <?php
-namespace model;
+
+namespace models;
+
 use core\Model;
-use function pw\Generate_Pw;
+use function scripts\Generate_Pw;
 
 class Model_Reset extends Model
 {

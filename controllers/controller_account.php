@@ -1,7 +1,10 @@
 <?php
-    use core\Controller;
-    use core\View;
-    use model\Model_Account;
+
+//namespace controllers;
+
+use core\Controller;
+use core\View;
+use models\Model_Account;
 
 
 class Controller_Account extends Controller

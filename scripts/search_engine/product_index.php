@@ -1,5 +1,5 @@
 <?php
-namespace src\search_engine;
+namespace scripts\search_engine;
 
 use database\DB;
 

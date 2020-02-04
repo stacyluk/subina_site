@@ -1,6 +1,8 @@
 <?php
-namespace model;
-use src\search_engine\Search_Core;
+
+namespace models;
+
+use scripts\search_engine\Search_Core;
 
 class Model_Search extends Model_Catalog
 {

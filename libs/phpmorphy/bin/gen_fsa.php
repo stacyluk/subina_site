@@ -6,7 +6,7 @@ if (2 == (ini_get('mbstring.func_overload') & 2)) {
 
 require_once(dirname(__FILE__).'/../utils/autogen/fsa/gen.php');
 
-$fsa_dir = dirname(__FILE__).'/../src/fsa/access';
+$fsa_dir = dirname(__FILE__).'/../scripts/fsa/access';
 
 try {
     generate_fsa_files($fsa_dir);

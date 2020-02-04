@@ -1,6 +1,7 @@
 <?php
-namespace src\search_engine;
-//require_once PHPMORPHY_DIR.'common.php';
+namespace scripts\search_engine;
+use phpMorphy;
+
 require_once __DIR__.DIRECTORY_SEPARATOR.'../../libs/phpmorphy/src/common.php';
 
 class Morphy

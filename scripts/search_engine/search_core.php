@@ -1,5 +1,7 @@
 <?php
-namespace src\search_engine;
+namespace scripts\search_engine;
+
+use stdClass;
 
 class Search_Core
 {

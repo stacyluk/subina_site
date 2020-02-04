@@ -6,7 +6,7 @@ if (2 == (ini_get('mbstring.func_overload') & 2)) {
 
 require_once(dirname(__FILE__).'/../utils/autogen/graminfo/gen.php');
 
-$graminfo_dir = dirname(__FILE__).'/../src/graminfo/access';
+$graminfo_dir = dirname(__FILE__).'/../scripts/graminfo/access';
 
 try {
     generate_graminfo_files($graminfo_dir);

@@ -1,7 +1,10 @@
 <?php
-    use core\Controller;
-    use core\View;
-    use model\Model_Reset;
+
+//namespace controllers;
+
+use core\Controller;
+use core\View;
+use models\Model_Reset;
 
 class Controller_Reset extends Controller
 {

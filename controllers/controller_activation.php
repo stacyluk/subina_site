@@ -1,7 +1,10 @@
 <?php
-    use core\Controller;
-    use core\View;
-    use model\Model_Activation;
+
+//namespace controllers;
+
+use core\Controller;
+use core\View;
+use models\Model_Activation;
 
 
 class Controller_Activation extends Controller

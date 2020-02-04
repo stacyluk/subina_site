@@ -8,7 +8,7 @@ use ZxcvbnPhp\Matchers\Match;
  * Feedback - gives some user guidance based on the strength
  * of a password
  *
- * @see zxcvbn/src/feedback.coffee
+ * @see zxcvbn/scripts/feedback.coffee
  */
 class Feedback
 {

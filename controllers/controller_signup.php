@@ -1,9 +1,12 @@
 <?php
-    use core\Controller;
-    use core\View;
-    use model\Model_Signup;
 
-    class Controller_Signup extends Controller
+//namespace controllers;
+
+use core\Controller;
+use core\View;
+use models\Model_Signup;
+
+class Controller_Signup extends Controller
 {
     public function __construct()
     {

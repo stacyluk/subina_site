@@ -1,5 +1,5 @@
 <?php
-namespace src;
+namespace scripts;
 use ZxcvbnPhp\Zxcvbn;
 
 function Check_Strength($password, $username, $email)

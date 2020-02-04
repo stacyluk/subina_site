@@ -21,9 +21,10 @@ spl_autoload_register(function ($class) {
     // separators with directory separators in the relative class name, append
     // with .php
     $file = $base_dir.str_replace('\\', '/', $relative_class).'.php';
+    $file_dir = strtolower($file);
 
     // if the file exists, require it
-    if (file_exists($file)) {
-        require $file;
+    if (file_exists($file_dir)) {
+        require $file_dir;
     }
 });

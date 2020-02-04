@@ -1,4 +1,7 @@
 <?php
+
+//namespace controllers;
+
 use core\Controller;
 
 class Controller_Home extends Controller

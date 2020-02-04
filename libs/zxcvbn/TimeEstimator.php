@@ -6,7 +6,7 @@ namespace ZxcvbnPhp;
  * Feedback - gives some user guidance based on the strength
  * of a password
  *
- * @see zxcvbn/src/time_estimates.coffee
+ * @see zxcvbn/scripts/time_estimates.coffee
  */
 class TimeEstimator
 {

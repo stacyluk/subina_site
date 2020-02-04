@@ -1,7 +1,10 @@
 <?php
-    use core\Controller;
-    use core\View;
-    use model\Model_Login;
+
+//namespace controllers;
+
+use core\Controller;
+use core\View;
+use models\Model_Login;
 
 class controller_login extends Controller
 {
