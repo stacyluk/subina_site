@@ -11,6 +11,8 @@ class Route
         $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $routes = explode('/', $url_path);
 
+        $rules = [];
+
         // получаем имя контроллера
         if (!empty($routes[1])) {
             $controller_name = $routes[1];
@@ -47,7 +49,7 @@ class Route
             правильно было бы кинуть здесь исключение,
             но для упрощения сразу сделаем редирект на страницу 404
             */
-            route::ErrorPage404();
+            Route::ErrorPage404();
         }
 
         // создаем контроллер
@@ -64,7 +66,14 @@ class Route
             }
         } else {
             // здесь также разумнее было бы кинуть исключение
-            route::ErrorPage404();
+            Route::ErrorPage404();
+        }
+
+    }
+
+    public function parse_url($url, $path) {
+        if (preg_match('#^([\w-]+)#i', $path, $matches)){
+
         }
 
     }
